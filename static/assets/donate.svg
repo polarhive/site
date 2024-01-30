@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="62"
+   height="26"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="donate.svg"
+   inkscape:version="1.1 (c4e8f9ed74, 2021-05-24)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs12" />
+  <sodipodi:namedview
+     id="namedview10"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="18.596774"
+     inkscape:cx="31"
+     inkscape:cy="13.01301"
+     inkscape:window-width="1366"
+     inkscape:window-height="711"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg8" />
+  <g
+     id="g6">
+    <title
+       id="title2">Layer 1</title>
+    <rect
+       stroke-width="0.81765"
+       rx="2.92984"
+       height="25"
+       width="60.0617"
+       y="0.41832"
+       x="0.81831"
+       fill="#f6c915"
+       id="back" />
+    <text
+       id="text95"
+       y="17.12"
+       x="30.97935"
+       font-size="14px"
+       font-weight="700"
+       font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+       text-anchor="middle"
+       fill="#1a171b">Donate</text>
+  </g>
+</svg>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <link rel="stylesheet" href="/assets/main.css">
+ <title>listening — polarhive</title>
+ <style>.now-playing {color: red;}</style>
+ </head>
+ <body>
+<header><h2>I'm listening to  <div style="float;transform: translateY(-5px)" class="lds-ripple"><div></div><div></div></div></h2></header>
+    <ul id="scrobbles"></ul>
+    <script>
+      const apiKey = '0283da3953c34cae40ee823d3ed21c09';
+      const username = 'polarhive';
+      const limit = 15;
+      const apiUrl = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${username}&api_key=${apiKey}&limit=${limit}&format=json`;
+      fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+          const tracks = data.recenttracks.track;
+          const scrobblesList = document.getElementById('scrobbles');
+          const totalScrobbles = data.recenttracks['@attr'].total;
+          tracks.forEach(track => {
+            const artist = track.artist['#text'];
+            const title = track.name;
+            const isNowPlaying = track['@attr'] && track['@attr'].nowplaying === 'true';
+            let scrobbleText = `${artist} - ${title}`;
+            if (isNowPlaying) {scrobbleText += ' <span class="now-playing">(now playing)</span>';}
+	    else {
+              const scrobbleTime = track.date ? new Date(parseInt(track.date.uts) * 1000) : new Date();
+              const timeDiff = Math.floor((new Date() - scrobbleTime) / 1000); // difference in seconds
+              if (timeDiff < 60) {
+                scrobbleText += ` (${timeDiff} seconds ago)`;
+              } else if (timeDiff < 60 * 60) {
+                scrobbleText += ` (${Math.floor(timeDiff / 60)} minutes ago)`;
+              } else if (timeDiff < 60 * 60 * 24) {
+                scrobbleText += ` (${Math.floor(timeDiff / (60 * 60))} hours ago)`;
+              } else {
+                scrobbleText += ` (${Math.floor(timeDiff / (60 * 60 * 24))} days ago)`;
+              }
+            }
+            const scrobbleItem = document.createElement('li');
+            scrobbleItem.innerHTML = scrobbleText;
+            if (isNowPlaying) {
+              scrobbleItem.classList.add('now-playing');
+            }
+            scrobblesList.appendChild(scrobbleItem);
+          });
+        })
+        .catch(error => console.error(error));
+    </script>
+    <noscript><a href="/lastfm"><img src="https://lastfm-recently-played.vercel.app/api?user=polarhive&count=10&loved=true&loved_style=3" height="auto" width="800"></a></noscript>
+    <hr>
+    <p>checkout <a href=/jukebox>/jukebox</a>: play LastFM recommendations on linux: using mpd, yt-dlp and bash.
+    <details><summary>/lastfm</summary>widget by <a href=https://music.blackpiratex.com>blackpiratex</a>
+ <footer><hr>Nathan — 2018-2023 · <a href="/feed" target="_blank"><img src="/assets/buttons/rss.svg" alt="rss icon" style="float:right;width:20px;height:20px;"></a> &nbsp;<a href="https://fediring.net/previous?host=polarhive.net"><-</a> <a href="https://fediring.net/">fediring</a> <a href="https://fediring.net/next?host=polarhive.net">-></a>
+
+ </footer>
+
+    </details>
+ </body>
+</html>

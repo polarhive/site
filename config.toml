@@ -1,0 +1,8 @@
+baseURL = 'https://polarhive.net'
+languageCode = "en-IN"
+title = "polarhive"
+copyright = 'This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International.'
+disableKinds = ["taxonomy"]
+[author]
+  name = 'Nathan Paul'
+  email = 'mail@polarhive.net'

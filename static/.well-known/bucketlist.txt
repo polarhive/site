@@ -1,0 +1,45 @@
+------------------------------------------
+Things to do at least once in a lifetime!
+[-] 3D print
+[-] Attend a KKB concert
+[-] Attend a conference
+[-] Attend one of the Olympics
+[-] Become financially independent
+[-] Build a custom PC
+[-] Build a snowman
+[-] Build an indie web browser not built on Chromium/WebKit/Gecko
+[-] Build an off-grid sustainable house
+[-] Contribute to KDE and libre software
+[-] Decode hardwarde / reverse engineer using assembly
+[-] Earn a scholarship
+[-] Freelance before graduating
+[-] Get a DSLR / mirrorless camera
+[-] Go go-karting
+[-] Go sailing
+[-] Install Gentoo
+[-] Interview RMS
+[-] Learn Latin — to know about words (etymology)
+[-] Learn R-lang
+[-] Learn to swim
+[-] Make popcorn from scratch
+[-] Participate in a mapathon
+[-] Pet an otter
+[-] Produce a documentary film
+[-] Produce my own music
+[-] Publish an F-Droid app
+[-] Rebuild my website
+[-] Teach physics & CS to build scientific temper
+[-] Travel with a stranger
+[-] Visit the Rain Vortex at Changi Airport, Singapore
+[x] Completely switch to RSS feeds
+[x] Document my life in a GitBook
+[x] Get a Dog
+[x] Get a PGP key
+[x] Give a talk
+[x] Help peopl learn about libre software / privacy
+[x] Help people in my matrix community
+[x] Join a webring
+[x] Learn from the best hackers (playfully clever people) in the realm of Computer Science
+[x] learn to drive a car
+[x] participate in a hackathon
+[x] self host services at home

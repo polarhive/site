@@ -1,0 +1,23 @@
+User-agent: ia_archiver
+Disallow: /
+
+User-Agent: Adsbot
+Disallow: /
+Allow: /ads.txt
+
+User-Agent: TurnitinBot
+Disallow: /
+
+User-Agent: NPBot
+Disallow: /
+
+User-Agent: SlySearch
+Disallow: /
+
+User-Agent: BLEXBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+Sitemap: https://polarhive.net/sitemap.xml
