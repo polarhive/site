@@ -32,12 +32,6 @@ package = "@netlify/plugin-sitemap"
   force = true
 
 [[redirects]]
-  from = "/accounts"
-  to = "/contact"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "/afk"
   to = "/contact"
   status = 301
@@ -194,7 +188,7 @@ package = "@netlify/plugin-sitemap"
   force = true
 
 [[redirects]]
-  from = "https://polarhive.net/assets/polarhive_gpg.txt"
+  from = "/assets/polarhive_gpg.txt"
   to = "https://polarhive.net/.well-known/polarhive_gpg.txt"
   status = 301
   force = true
