@@ -20,4 +20,7 @@ Disallow: /
 User-agent: ChatGPT-User
 Disallow: /
 
+User-agent: *
+Disallow: /listening/
+
 Sitemap: https://polarhive.net/sitemap.xml
