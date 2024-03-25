@@ -129,7 +129,7 @@ package = "@netlify/plugin-sitemap"
 
 [[redirects]]
   from = "/posts/*"
-  to = "/blog:splat"
+  to = "/blog/:splat"
   status = 301
   force = true
 
@@ -207,7 +207,7 @@ package = "@netlify/plugin-sitemap"
 
 [[redirects]]
   from = "https://blog.polarhive.net/*"
-  to = "/blog"
+  to = "https://polarhive.net/blog"
   status = 301
   force = true
 
