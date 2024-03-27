@@ -323,7 +323,7 @@ Windows and what not.
 {{< html >}}
 
 <style> video {width: 100%; height: auto;} </style>
-<video autoplay controls poster="//static.fsf.org/nosvn/rms-photos/20140407-geneva-01.png" src="https://audio-video.gnu.org/video/TEDxGE2014_Stallman05_LQ.webm" type="video/webm"></video>
+<video controls poster="//static.fsf.org/nosvn/rms-photos/20140407-geneva-01.png" src="https://audio-video.gnu.org/video/TEDxGE2014_Stallman05_LQ.webm" type="video/webm"></video>
 <i>Richard Stallman's TEDx video: "Introduction to Free Software and the Liberation of Cyberspace"</i>
 
 {{< /html >}}
