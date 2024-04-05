@@ -19,17 +19,18 @@ authors:
   - Nathan
   - Anirudh
 ---
+> ### *Presented and written by Adhesh, Anirudh, Aditya and Nathan*
 
 There are several amazing SSGs out there, like [Hugo](https://gohugo.io/) and
 [11ty](https://www.11ty.dev/). Building your own SSG is an amazing learning
 experience. It also motivates one to maintain and improve their personal site.
 
-> Presented and written by Adhesh, Anirudh, Aditya and Nathan
+![anna_pc](anna.jpg)
 
-Building personal blogs from the ground up can be a *tedious process*. Some of us
-have had our hands deep in vanilla HTML and CSS, which isn't fun to maintain. We
-all want to get to the point and share our thoughts on the web. But, there is a
-small bump that stops us from doing so.
+Building personal blogs from the ground up can be a *tedious process*. Some of
+us have had our hands deep in vanilla HTML and CSS, which isn't fun to
+maintain. We all want to get to the point and share our thoughts on the web.
+But, there is a small bump that stops us from doing so.
 
 Maintaining your personal site is like working with your own Neovim
 configuration. Every issue fixed would lead to an entirely unrelated bug. There
@@ -39,30 +40,31 @@ is a lot of time spent fixing things rather than getting productive work done.
 
 ![Lighthouse scores of the anna-docs page](https://raw.githubusercontent.com/acmpesuecc/anna/main/site/static/images/posts/fireside-anna/lighthouse.png)
 
-It can simplify the whole process: allowing you to spend time and energy
-on quality content. Keep reading to find out how we designed anna `v1.0.0`
+It can simplify the whole process: allowing you to spend time and energy on
+quality content. Keep reading to find out how we designed anna `v1.0.0`
 
 ---
-
 ## Introduction
 
-ACM-PESU ECC conducts the ACM Industrial Experience Program (AIEP), an annual program that spans six weeks.
+ACM-PESU ECC conducts the ACM Industrial Experience Program (AIEP), an annual
+program that spans six weeks.
 
-> It involves students working as a team to develop an industrial-level
+> *It involves students working as a team to develop an industrial-level
 > project. AIEP intends to give students hands-on experience with real-world
 > projects. It is an excellent opportunity to interact with like-minded
-> individuals.
+> individuals.*
 
-Our AIEP team consisted of [Adhesh](https://github.com/DedLad), [Aditya](https://github.com/bwaklog),
-[Nathan](https://github.com/polarhive), and [Anirudh](https://github.com/anirudhsudhir).
+Our AIEP team consisted of [Adhesh](https://github.com/DedLad),
+[Aditya](https://github.com/bwaklog), [Nathan](https://github.com/polarhive),
+and [Anirudh](https://github.com/anirudhsudhir).
 
 Our mentors (cool ass senior names!) gave us some great ideas for a team of us
-four freshers.
-We were puzzled whether to build a distributed Postgres clone or a load balancer.
+four freshers. We were puzzled whether to build a distributed Postgres clone or
+a load balancer.
 
-Deep discussions over a week got us to the topic of making
-blog sites and how tiring it is to work with, which only gets worse as you
-write more and more content for your internet home.
+Deep discussions over a week got us to the topic of making blog sites and how
+tiring it is to work with, which only gets worse as you write more and more
+content for your internet home.
 
 This and inspirations from [Saaru](https://github.com/anirudhRowjee/saaru) and
 [Sapling](https://github.com/NavinShrinivas/sapling) pushed us to tackle this
@@ -76,29 +78,29 @@ problem with our own SSG.
 /_/  |_/_/ /_/_/ /_/\__,_/
 
 A static site generator in Go
-
 ```
 
 ## The small but big decision!
 
 Anna is written in [Go](https://go.dev). We considered writing it in Rust, but
-that came with a steep learning curve.
-Go is a powerful language and has excellent concurrency support, which suited our requirements to build a performant application.
+that came with a steep learning curve. Go is a powerful language and has
+excellent concurrency support, which suited our requirements to build a
+performant application.
 
 ### What's in a name?
 
-Probably the first thing that us four came across when joining ACM and HSP was the famous Saaru repository.
-[Saaru](https://github.com/anirudhRowjee/saaru),
-one of the projects that inspired our ssg, is derived from a [Kannada](https://en.wikipedia.org/wiki/Kannada) word.
-Saaru is a thin lentil soup, usually served with rice.
+Probably the first thing that us four came across when joining ACM and HSP was
+the famous Saaru repository. [Saaru](https://github.com/anirudhRowjee/saaru),
+one of the projects that inspired our ssg, is derived from a
+[Kannada](https://en.wikipedia.org/wiki/Kannada) word. Saaru is a thin lentil
+soup, usually served with rice.
 
 > In Kannada, rice is referred to as 'anna'(ಅನ್ನ) pronounced <i>/ɐnːɐ/</i>
 
-This was just a playful stunt that we played. We plan on beating Saaru at
-build times, optimizing at runtime.
+This was just a playful stunt that we played. We plan on beating Saaru at build
+times, optimizing at runtime and making the best of go-internals.
 
 ---
-
 ## Genesis
 
 We began the project in a unique manner, with each of us creating our own
@@ -111,12 +113,11 @@ HTML was injected into a layout.html file and served over a local web server.
 Later, we implemented a front matter YAML parser to retrieve page metadata
 
 ---
-
 ## What made us develop this to a great extent?
 
-- Beginner-friendly: An easy setup wizard, easy and ready to use layouts, and themes. We want the
-process of typing out a blog and putting it up on your site to be short and
-simple.
+- Beginner-friendly: An easy setup wizard, easy and ready to use layouts, and
+themes. We want the process of typing out a blog and putting it up on your site
+to be short and simple.
 - Speed: Be fast (hugo – written in Go, is remarkably fast)
 - Maintainable: This ssg will be used by us, hence it should be easy to fix
 bugs and add new features
@@ -141,11 +142,13 @@ goroutines.
 
 ## Prototype
 
-The initial prototype built by Adhesh consisted of a multi-goroutine system.
-A new goroutine would be spawned to walk the required directories.
-If the current path being walked was a file, the path would be passed to another function along with its current modification time.
+The initial prototype built by Adhesh consisted of a multi-goroutine system. A
+new goroutine would be spawned to walk the required directories. If the current
+path being walked was a file, the path would be passed to another function
+along with its current modification time.
 
-The previous mod time of the file would then be retrieved from a map holding the mod times of all the files:
+The previous mod time of the file would then be retrieved from a map holding
+the mod times of all the files:
 
 - If the given file was freshly created, its modification time would be added to the map.
 - If there was no change in the mod time, no changes would be made.
@@ -156,30 +159,32 @@ The new function checks if a child process is running:
 - For the first render, when a process has not been created, a new process is created that runs anna ("go run main.go --serve")
 - For successive renders, the existing process is killed and a new process is spawned once again that runs anna. 
 
-This prototype was not very efficient as it created and killed processes for every change.
-It had multiple goroutines attempting to walk the directories at the same time.
-It also used multiple mutual exclusion locks to prevent data races.
-Integrating this into the project also proved to be challenging.
+This prototype was not very efficient as it created and killed processes for
+every change. It had multiple goroutines attempting to walk the directories at
+the same time. It also used multiple mutual exclusion locks to prevent data
+races. Integrating this into the project also proved to be challenging.
 
 ## Improved version
 
-The live reload feature was improved by Anirudh.
-The updated version utilised two goroutines.
+The live reload feature was improved by Anirudh. The updated version utilised
+two goroutines.
 
-The main goroutine used the earlier file walker, with one important change: it sequentially traversed the directory without spawning new goroutines.
-For any modification to a file in the current traversal, a vanilla render of the entire site would be performed.
-The goroutine would then sleep for a specified duration (currently 1 second) before attempting the next directory traversal.
+The main goroutine used the earlier file walker, with one important change: it
+sequentially traversed the directory without spawning new goroutines. For any
+modification to a file in the current traversal, a vanilla render of the entire
+site would be performed. The goroutine would then sleep for a specified
+duration (currently 1 second) before attempting the next directory traversal.
 
-The secondary goroutine ran a local web server that served the rendered/ directory.
-
-This eliminated all locks and avoided the creation and destruction of any child processes.
+The secondary goroutine ran a local web server that served the `rendered/`
+directory. This eliminated all locks and avoided the creation and destruction
+of any child processes.
 
 ---
-
 ## We cook! 🍳
 
-Here are some screenshots out of our group chats, that demonstrate build times, profiling et-al when having thousands of markdown files or in this case
-just copy-pasting a single markdown file en-mass!
+Here are some screenshots out of our group chats, that demonstrate build times,
+profiling et-al when having thousands of markdown files or in this case just
+copy-pasting a single markdown file en-mass!
 
 ![Hyperfine benchmarks comparing the render times of anna, Saaru and 11ty](https://raw.githubusercontent.com/acmpesuecc/anna/main/site/static/images/posts/fireside-anna/bench.png)
 
@@ -187,24 +192,29 @@ just copy-pasting a single markdown file en-mass!
 
 ### Profiling
 
-Heres the CPU profile of anna, generated using pprof.
-This profile was generated while rendering this site.
+Heres the CPU profile of anna, generated using `pprof`. This profile was
+generated while rendering this site.
 
-Here's an SVG showing how much time each sys-call / process takes and how each block adds-up to render / build times
+Here's an SVG showing how much time each sys-call / process takes and how each
+block adds-up to render / build times
 
 ![CPU profile of an anna render generated using pprof](https://raw.githubusercontent.com/acmpesuecc/anna/main/site/static/images/posts/fireside-anna/cpu_prof.svg)
 
-You may wanna zoom-in about 3-4x times to get to see how our ssg works
+You may wanna open in a new tab or zoom-in about 3-4x times to get to see how
+our ssg works
 
 ---
 ## A big rewrite (when we went for a TDD approach)
 
 Starting off this project, we kept adding functionality without optimization.
-We didn’t have a proper structure; PRs would keep breaking features and overwriting functions written by fellow team-mates.
+We didn’t have a proper structure; PRs would keep breaking features and
+overwriting functions written by fellow team-mates.
 
 ### A new proposed rendering system
 
-We proceeded to restructure our SSG into: modules previously part of `cmd/anna/utils.go` and `cmd/anna/main.go` were to be split between `pkg/parsers/`, `pkg/engine/` and `pkg/helper`
+We proceeded to restructure our SSG into: modules previously part of
+`cmd/anna/utils.go` and `cmd/anna/main.go` were to be split between
+`pkg/parsers/`, `pkg/engine/` and `pkg/helper`
 
 ```text
 pkg
@@ -224,11 +234,14 @@ pkg
 	├── parser_test.go
 	└── parser_integration_test.go
 ```
+Currently there are two separate types of files that have to be rendered. One
+set includes user-defined files such as `index.md`, `docs.md` and various
+posts. These are specific to a user.
 
-Currently there are two separate types of files that have to be rendered. One set includes user-defined files such as `index.md`, `docs.md` and various posts. These are specific to a user.
-
-The second set of files that are rendered include `tags.html`, `sub-tags.html` and `posts.html`
-Now, the generator/engine has a method to render "anna specific" pages and another method to render "user defined" pages which include all the user pages and posts
+The second set of files that are rendered include `tags.html`, `sub-tags.html`
+and `posts.html` Now, the generator/engine has a method to render "anna
+specific" pages and another method to render "user defined" pages which include
+all the user pages and posts
 
 Here's some of Anirudh's work written during week-2
 
@@ -240,27 +253,29 @@ Here's some of Anirudh's work written during week-2
 > - Wrote a benchmark for main.go that times the entire application
 
 ---
-
 ## To search or not to search? 🤔
 
-> That is the question > Is our *static site* becoming and at what cost?
+> That is the question? is our *static site* becoming dynamic! And at what
+> cost?
 
 We were wondering if we’d need a search function on our site since Google and
 any other web-crawler index our site anyway. If we needed to implement it, we
 had a constraint: we cannot use an API. It had to be static and local to be
-user-friendly to work with.
-Aditya and Anirudh implemented a JSON index generator that uses "Deep Data Merge" to index posts on our site.
+user-friendly to work with. Aditya and Anirudh implemented a JSON index
+generator that uses "Deep Data Merge" to index posts on our site.
 
-This index is built at runtime and works without any lag or noticeable delay when searching across posts.
-We mean to re-write it using WASM if necessary and if it costs us time when performing searches.
+This index is built at runtime and works without any lag or noticeable delay
+when searching across posts. We mean to re-write it using WASM if necessary and
+if it costs us time when performing searches.
 
 ![Demonstration of the search feature in anna](https://raw.githubusercontent.com/acmpesuecc/anna/main/site/static/images/posts/fireside-anna/search.gif)
 
 ## JS integration as plugins
 
 Aditya added a field to our frontmatter which lets you pick and add certain JS
-based snippets to your site.
-This way, you get to add `highlight.js` support, analytics scripts and donation page widgets; that you can source from the `static/scripts` folder and toggle as needed per-markdown page.
+based snippets to your site. This way, you get to add `highlight.js` support,
+analytics scripts and donation page widgets; that you can source from the
+`static/scripts` folder and toggle as needed per-markdown page.
 
 ## Wizard
 
@@ -276,11 +291,13 @@ the setup, the wizard launches a live preview of your site in a new tab.
 
 ### Raw HTML
 
-What if you'd want to add a contact form to your site? or embed YouTube videos or iframes of your choosing?
+What if you'd want to add a contact form to your site? or embed YouTube videos
+or iframes of your choosing?
 
 Anna let's us do that! Although, the point of a static site generator is to
-quickly get to writing and focusing on the content.
-You can still embed js elements and iframe as needed to showcase any interesting YouTube videos or to just rickroll people!
+quickly get to writing and focusing on the content. You can still embed js
+elements and iframe as needed to showcase any interesting YouTube videos or to
+just rickroll people!
 
 ## Tags
 
@@ -323,14 +340,16 @@ We are at week: 3/6 and have a lot of things in store and bugs to squash!
 
 > Feel free to ask any questions / send feature requests you'd like to see?
 
-This blog post misses out of many not-so well documented features and learnings that 
-we got during midnight calls and the patches we kept sending each other fixing trivial but
-interesting issues. Have a look at our [GitHub](https://github.com/acmpesuecc/anna/issues), for
-more
+This blog post misses out of many not-so well documented features and learnings
+that we got during midnight calls and the patches we kept sending each other
+fixing trivial but interesting issues. Have a look at our
+[GitHub](https://github.com/acmpesuecc/anna/issues), for more
 
 ---
-Today [anna](https://github.com/acmpesuecc/anna/releases/latest) is tagged at v1.0.0 and we use it on our personal sites:
-[hegde.live](https://hegde.live) // [sudhir.live](https://sudhir.live) // [polarhive.net](https://polarhive.net)
+Today [anna](https://github.com/acmpesuecc/anna/releases/latest) is tagged at
+v1.0.0 and we use it on our personal sites: [hegde.live](https://hegde.live) //
+[sudhir.live](https://sudhir.live) // [polarhive.net](https://polarhive.net)
 
 ---
 01100001 01101110 01101110 01100001
+
