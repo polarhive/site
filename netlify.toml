@@ -1,5 +1,5 @@
 [build]
-  command = "hugo"
+  command = "./setup.sh"
   publish = "public"
 
 [[plugins]]
@@ -87,19 +87,13 @@ package = "@netlify/plugin-sitemap"
 
 [[redirects]]
   from = "/knowledge"
-  to = "https://codeberg.org/polarhive/knowledge"
+  to = "/wiki"
   status = 301
   force = true
 
 [[redirects]]
   from = "/garden"
-  to = "/knowledge"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/wiki"
-  to = "/knowledge"
+  to = "/wiki"
   status = 301
   force = true
 
