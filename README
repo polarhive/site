@@ -7,6 +7,7 @@ polarhive.net
 
 MIT License
 -----------
+Copyright (c) 2024 Nathan Paul
 Copyright (c) 2024 anna authors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,7 +29,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 --
-[0]: https://netlify.com
 [1]: https://github.com/acmpesuecc/anna
 [2]: https://github.com/polarhive/sushi
+[0]: https://api.netlify.com/api/v1/badges/17f6c9ff-7869-439f-bbf6-ec3b905e03f9/deploy-status 
 
