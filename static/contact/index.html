@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="A page with all my online accounts: @polarhive">
     <meta name="author" content="Nathan Paul">
-    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
     <link rel="icon" href="/assets/favicon.svg">
     <link rel="canonical" href="https://polarhive.net/contact/">
     <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
@@ -21,8 +21,8 @@
         <h1>Contact<a href="/"><video src="/assets/glitch.mp4" class="video-circle" autoplay muted loop
                     alt="Nathan's profile picture" style="float:right;width:48px;height:48px;"></a></h1>
     </header>
+    <hr>
     <main>
-        <fieldset>
             <h2>Say 👋</h2>
             <form name="contact" method="POST" action="/form" netlify-honeypot="bot-field" data-netlify="true">
                 <p hidden><label>Don’t fill this out if you're human: <input type="text" placeholder="name"
@@ -31,7 +31,6 @@
                 <p><input type="text" name="email" placeholder="email: if you're seeking a reply"></p>
                 <p><button>Send</button></p>
             </form>
-        </fieldset>
         
         <hr>
 
@@ -52,13 +51,25 @@
 
     </main>
     <footer>
-        <hr>Nathan &#183; 2018-2024 &#183;
+        Nathan &#183; 2018-2024 &#183;
         <a href="/feed"><img src="/assets/buttons/rss.svg" alt="rss icon"
                 style="float:right;width:20px;height:20px;"></a>
         <a href=/gpg>0x78DBFBE8B325A5A9</a> &#183;
         <a href="https://fediring.net/previous?host=polarhive.net">&lt;-</a> <a
             href="https://fediring.net/">fediring</a> <a href="https://fediring.net/next?host=polarhive.net">-></a>
     </footer>
+
+    <style>
+        .video-circle {
+          border-radius: 50%;
+          object-fit: cover;
+        }
+  
+        body {
+          padding: 0 22px;
+          margin: 20px auto;
+        }
+      </style>
 </body>
 
 </html>
