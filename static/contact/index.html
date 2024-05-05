@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="A page with all my online accounts: @polarhive">
     <meta name="author" content="Nathan Paul">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
+    <link rel="stylesheet" href="/assets/water.css">
     <link rel="icon" href="/assets/favicon.svg">
     <link rel="canonical" href="https://polarhive.net/contact/">
     <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
@@ -23,31 +23,38 @@
     </header>
     <hr>
     <main>
-            <h2>Say 👋</h2>
-            <form name="contact" method="POST" action="/form" netlify-honeypot="bot-field" data-netlify="true">
-                <p hidden><label>Don’t fill this out if you're human: <input type="text" placeholder="name"
-                            name="bot-field"></label></p>
-                <p><textarea name="message" placeholder="Hi!"></textarea></p>
-                <p><input type="text" name="email" placeholder="email: if you're seeking a reply"></p>
-                <p><button>Send</button></p>
-            </form>
-        
-        <hr>
-
-        <h2><a href="/email">/email</a></h2> 
-        Please write in <a href="https://useplaintext.email/">plain-text</a> when sending me mail. Here's my <ahref=/pgp>/PGP</a> key should you need it.
+        <h2>Say 👋</h2>
+        <form name="contact" method="POST" action="/form" netlify-honeypot="bot-field" data-netlify="true">
+            <p hidden><label>Don’t fill this out if you're human: <input type="text" placeholder="name"
+                        name="bot-field"></label></p>
+            <p><textarea name="message" placeholder="Hi!"></textarea></p>
+            <p><input type="text" name="email" placeholder="email: if you're seeking a reply"></p>
+            <p><button>Send</button></p>
+        </form>
 
         <hr>
-        <details>
-            <summary>elsewhere</summary>
+
+        <h2><a href="/email">/email</a></h2>
+        Please write in <a href="https://useplaintext.email/">plain-text</a> when sending me mail. Here's my <a href=/pgp>/PGP</a> key should you need it.
+
+            <hr>
+
+            <h2>quick links 🔗</h2>
             <ul>
-                <li><a href="/youtube" target="_blank" rel="noopener">YouTube</a>
-                <li><a href="/mastodon" target="_blank" rel="noopener">Mastodon</a>
-                <li><a href="/pixelfed" target="_blank" rel="noopener">Pixelfed</a>
-                <li><a href="/peertube" target="_blank" rel="noopener">PeerTube</a>
-                <li><a href="/lbry" target="_blank" rel="noopener">Odysee</a>
+                <li><a href="/matrix">[matrix]</a>
+                <li><a href="/tg">Telegram</a>
+                <li><a href="/youtube">YouTube</a>
+                <li><a href="/mastodon">Mastodon</a>
+                <li><a href="/pixelfed">Pixelfed</a>
+                <li><a href="/lbry">Odysee</a>
             </ul>
-        </details>
+
+            <h2>join my chatroom 🍿</h2>
+            <ul>
+                <li><a href="/chatroom/matrix">[matrix]</a>
+                <li><a href="/chatroom/telegram">Telegram</a>
+            </ul>
+
 
     </main>
     <footer>
@@ -59,17 +66,6 @@
             href="https://fediring.net/">fediring</a> <a href="https://fediring.net/next?host=polarhive.net">-></a>
     </footer>
 
-    <style>
-        .video-circle {
-          border-radius: 50%;
-          object-fit: cover;
-        }
-  
-        body {
-          padding: 0 22px;
-          margin: 20px auto;
-        }
-      </style>
 </body>
 
 </html>

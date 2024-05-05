@@ -95,7 +95,7 @@ one of the projects that inspired our ssg, is derived from a
 [Kannada](https://en.wikipedia.org/wiki/Kannada) word. Saaru is a thin lentil
 soup, usually served with rice.
 
-> In Kannada, rice is referred to as 'anna'(ಅನ್ನ) pronounced <i>/ɐnːɐ/</i>
+> In Kannada, rice is referred to as 'anna'(ಅನ್ನ) pronounced <i>/ɐn∗ɐ/</i>
 
 This was just a playful stunt that we played. We plan on beating Saaru at build
 times, optimizing at runtime and making the best of go-internals.

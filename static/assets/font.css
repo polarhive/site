@@ -1,13 +1,8 @@
-:root {
-  --nc-font-sans: "InterVar", sans-serif;
-  --nc-font-mono: "JetBrains Mono", "JetBrainsMono NF", monospace;
-  font-family: var(--nc-font-sans);
-}
-
 @supports (font-variation-settings: normal) {
   :root {
-    font-family: var(--nc-font-sans);
+    font-family: var(--sans-serif);
     font-optical-sizing: auto;
+    font-size: calc(1rem + 0.2vw)
   }
 }
 
@@ -24,4 +19,10 @@
   font-weight: 100 900;
   font-style: italic;
   src: url("Inter-Italic.var.woff2") format("woff2");
+}
+
+:root {
+  --sans-serif: "InterVar", sans-serif;
+  --mono: "JetBrains Mono", "JetBrainsMono NF", "Input Mono", monospace;
+  font-family: var(--sans-serif);
 }

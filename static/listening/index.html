@@ -1,58 +1,64 @@
 <!DOCTYPE html>
 <html lang="en-IN">
+
 <head>
- <title>listening — polarhive</title>
- <noscript><meta http-equiv="refresh" content="0; url=nojs/index.html"></noscript>
- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
- <meta http-equiv="refresh" content="30; url=/lastfm">
- <meta name="robots" content="noindex">
- <link rel="stylesheet" href="/assets/main.css">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
- <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📻</text></svg>">
- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
- <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <title>listening — polarhive</title><noscript>
+    <meta http-equiv="refresh" content="0; url=nojs/index.html">
+  </noscript>
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta http-equiv="refresh" content="30; url=/lastfm">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="/assets/water.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📻</text></svg>">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <style>
+
     body {
-      padding: 20px;
+      padding: 20px
     }
 
     h1 {
       font-size: 28px;
       font-weight: bold;
-      margin-bottom: 20px;
+      margin-bottom: 20px
     }
 
     h2 {
       font-size: 24px;
-      margin-top: 30px;
+      margin-top: 30px
     }
+
     .lead {
       font-size: 18px;
-      margin-bottom: 20px;
+      margin-bottom: 20px
     }
 
     .text-danger {
-      color: red;
+      color: red
     }
 
     .text-muted {
-      color: #666;
+      color: #666
     }
 
     .heart-icon {
       color: red;
-      margin-left: 5px;
+      margin-left: 5px
     }
 
     .now-playing {
       color: red;
-      font-weight: bold;
+      font-weight: bold
     }
 
     .track-name {
-      font-weight: bold;
+      font-weight: bold
     }
   </style>
+
   <script>
     const apiKey = '0283da3953c34cae40ee823d3ed21c09';
     const username = 'polarhive';
@@ -168,35 +174,40 @@
     setInterval(fetchTopData, 30000);
     window.addEventListener('DOMContentLoaded', fetchTopData);
   </script>
+
+
 </head>
 
 <body>
-    <header><h2>I'm listening to  <div style="float;transform: translateY(-5px)" class="lds-ripple"><div></div><div></div></div></h2></header>
-    <div class="container">
+  <header>
+    <h1>I'm listening to!<div style="float:right;width:50px;height:50px;" class="lds-ripple">
+        <div></div>
+        <div></div>
+      </div>
+    </h1>
+  </header>
+  <div class="container">
     <div>
-      <h2>Recent Tracks</h2>
       <ul id="recent-list"></ul>
     </div>
-
+    <hr>
     <div>
       <h2>Top Tracks</h2>
       <ul id="track-list"></ul>
     </div>
-
+    <hr>
     <div>
       <h2>Loved Tracks</h2>
       <ul id="loved-list"></ul>
     </div>
   </div>
   <hr>
-   Checkout my <a href=/lastfm>LastFM</a> for more
-   <hr>
- <details>
-     <summary>If you're on Brave or use ad-block: disable shields on this site. </summary>
-    Listen to these recommendations on linux: <a href=/jukebox>/jukebox</a>
-    <br>widget by: <a href=https://music.blackpiratex.com>blackpiratex</a>
- </details>
-
-  <footer><hr>Nathan — 2018-2024 · <a href="/feed" target="_blank"><img src="/assets/buttons/rss.svg" alt="rss icon" style="float:right;width:20px;height:20px;"></a> &nbsp;<a href="https://fediring.net/previous?host=polarhive.net"><-</a> <a href="https://fediring.net/">fediring</a> <a href="https://fediring.net/next?host=polarhive.net">-></a></footer>
+  <footer>
+    Nathan — 2018-2024 · <a href="/feed" target="_blank"><img src="/assets/buttons/rss.svg" alt="rss icon"
+        style="float:right;width:20px;height:20px;"></a> &nbsp;<a
+      href="https://fediring.net/previous?host=polarhive.net"><- </a><a href="https://fediring.net/">fediring</a> <a
+          href="https://fediring.net/next?host=polarhive.net">-></a>
+  </footer>
 </body>
+
 </html>
