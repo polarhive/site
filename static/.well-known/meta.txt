@@ -1,14 +1,14 @@
 polarhive.net
 -------------
 • host: Netlify
-• blog: hugo
-• css: newcss
-• theme: hugo-paper/lava
+• ssg: anna / hugo 🍚
+• css: water.css
+• license: MIT (code) + CC BY-NC-SA (content)
 
 MIT License
 -----------
-Copyright (c) 2020 (https://github.com/3x)
-Copyright (c) 2022 南小北 (https://github.com/nanxiaobei)
+Copyright (c) 2024 Nathan Paul
+Copyright (c) 2024 anna authors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -29,7 +29,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 --
-[0]: https://netlify.com
-[1]: https://gohugo.io
-[2]: https://newcss.net
-[3]: https://github.com/nanxiaobei/hugo-paper
+[1]: https://github.com/acmpesuecc/anna
+[2]: https://github.com/polarhive/sushi
+[0]: https://api.netlify.com/api/v1/badges/17f6c9ff-7869-439f-bbf6-ec3b905e03f9/deploy-status 
