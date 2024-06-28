@@ -14,34 +14,36 @@
         data-id="polarhive" data-description="Support me on Buy me a coffee!" data-message="Buy me a coffee"
         data-color="#FFDD00" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
     <a rel="me" href="https://mastodon.social/@polarhive"></a>
-    <script src="/assets/lenis.js"></script>
+    <script async src="/assets/lenis.js"></script>
 </head>
 
 <body>
+
+
     <header>
-        <h1>Contact<a href="/"><video src="/assets/glitch.mp4" class="video-circle" autoplay muted loop
-                    alt="Nathan's profile picture" style="float:right;width:48px;height:48px;"></a></h1>
+        <h1>∗ contact
+            <video src="/assets/glitch.mp4" class="video-circle" autoplay muted loop alt="profile picture">
+        </h1>
+        <nav>
+            <h2>Say 👋</h2>
+            <form action='/form' method='POST' name='contact'><input type='hidden' name='form-name' value='contact' />
+                <p hidden><label>Don’t fill this out if you're human: <input type="text" placeholder="name"
+                            name="bot-field"></label></p>
+                <p><textarea name="message" placeholder="Hi!"></textarea></p>
+                <p><input type="text" name="email" placeholder="email: if you're seeking a reply"></p>
+                <p><button>Send</button></p>
+            </form>
+        </nav>
     </header>
-    <hr>
     <main>
-        <h2>Say 👋</h2>
-        <form name="contact" method="POST" action="/form" netlify-honeypot="bot-field" data-netlify="true">
-            <p hidden><label>Don’t fill this out if you're human: <input type="text" placeholder="name"
-                        name="bot-field"></label></p>
-            <p><textarea name="message" placeholder="Hi!"></textarea></p>
-            <p><input type="text" name="email" placeholder="email: if you're seeking a reply"></p>
-            <p><button>Send</button></p>
-        </form>
+        <h2><a href="/email">/email</a> </h2>
 
-        <hr>
+        <fieldset> Please use <a href="https://useplaintext.email/">plain-text</a> when sending me an email.
+            My <a href=/gpg>/GPG</a> key, should you need it.
+            <pre>0x78DBFBE8B325A5A9</pre>
+        </fieldset>
 
-        <h2><a href="/email">/email</a></h2>
-        Please write in <a href="https://useplaintext.email/">plain-text</a> when sending me mail. Here's my <a
-            href=/pgp>/PGP</a> key should you need it.
-
-        <hr>
-
-        <h2>quick links 🔗</h2>
+        <h2>socials</h2>
         <ul>
             <li><a href="/matrix">[matrix]</a>
             <li><a href="/tg">Telegram</a>
@@ -51,22 +53,22 @@
             <li><a href="/lbry">Odysee</a>
         </ul>
 
-        <h2>join my chatroom 🍿</h2>
+        <h2>chatroom</h2>
         <ul>
             <li><a href="/chatroom/matrix">[matrix]</a>
             <li><a href="/chatroom/telegram">Telegram</a>
         </ul>
+        </details>
 
+        <hr>
+        <footer>
+            Nathan &#183; 2018-2024 &#183;
+            <a href=/gpg>0x78DBFBE8B325A5A9</a> &#183;
+            <a href="https://fediring.net/previous?host=polarhive.net">&lt;-</a> <a
+                href="https://fediring.net/">fediring</a> <a href="https://fediring.net/next?host=polarhive.net">-></a>
 
+        </footer>
     </main>
-    <footer>
-        Nathan &#183; 2018-2024 &#183;
-        <a href="/feed"><img src="/assets/buttons/rss.svg" alt="rss icon"
-                style="float:right;width:20px;height:20px;"></a>
-        <a href=/gpg>0x78DBFBE8B325A5A9</a> &#183;
-        <a href="https://fediring.net/previous?host=polarhive.net">&lt;-</a> <a
-            href="https://fediring.net/">fediring</a> <a href="https://fediring.net/next?host=polarhive.net">-></a>
-    </footer>
 
 </body>
 

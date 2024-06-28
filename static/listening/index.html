@@ -15,7 +15,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <style>
-
     body {
       padding: 20px
     }
@@ -174,40 +173,47 @@
     setInterval(fetchTopData, 30000);
     window.addEventListener('DOMContentLoaded', fetchTopData);
   </script>
-
-
 </head>
 
 <body>
   <header>
-    <h1>I'm listening to!<div style="float:right;width:50px;height:50px;" class="lds-ripple">
-        <div></div>
-        <div></div>
-      </div>
+    <h1>
+      <nav>
+        I'm listening to: <div style="float:right;width:40px;height:40px;" class="lds-ripple">
+          <div></div>
+          <div></div>
+        </div>
+      </nav>
     </h1>
   </header>
-  <div class="container">
-    <div>
-      <ul id="recent-list"></ul>
+
+  <main>
+    <div class="container">
+      <div>
+        <ul id="recent-list"></ul>
+      </div>
     </div>
     <hr>
-    <div>
-      <h2>Top Tracks</h2>
-      <ul id="track-list"></ul>
+    <div class="container">
+      <div>
+        <h2>Top Tracks</h2>
+        <ul id="track-list"></ul>
+      </div>
+      <hr>
+      <div>
+        <h2>Loved Tracks</h2>
+        <ul id="loved-list"></ul>
+      </div>
     </div>
+
     <hr>
-    <div>
-      <h2>Loved Tracks</h2>
-      <ul id="loved-list"></ul>
-    </div>
-  </div>
-  <hr>
-  <footer>
-    Nathan — 2018-2024 · <a href="/feed" target="_blank"><img src="/assets/buttons/rss.svg" alt="rss icon"
-        style="float:right;width:20px;height:20px;"></a> &nbsp;<a
-      href="https://fediring.net/previous?host=polarhive.net"><- </a><a href="https://fediring.net/">fediring</a> <a
-          href="https://fediring.net/next?host=polarhive.net">-></a>
-  </footer>
+    <footer>
+      <div class="webring"><a href="https://fediring.net/previous?host=polarhive.net">&lt;-</a> <a
+          href="https://fediring.net/">fediring</a> <a href="https://fediring.net/next?host=polarhive.net">-></a>
+        <div style="float:right;"><a href="/feed">/feed</a></div>
+      </div>
+    </footer>
+  </main>
 </body>
 
 </html>

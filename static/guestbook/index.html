@@ -14,11 +14,13 @@
 
 <body>
 	<header>
-		<h1>¯\_(ツ)_/¯<a href="/"><video src="/assets/glitch.mp4" class="video-circle" autoplay muted loop
-					alt="Nathan's profile picture" style="float:right;width:48px;height:48px;"></a></h1>
+		<h1>✍️
+			<video src="/assets/glitch.mp4" class="video-circle" autoplay muted loop alt="profile picture">
+		</h1>
 	</header>
 	<main>
-		<h2 id="log">Sign my guestbook! ✍️</h2>
+
+		<h2 id="log">Sign my guestbook! </h2>
 		<fieldset>
 			<form name="guestbook" method="POST" action="/form" netlify-honeypot="bot-field" data-netlify="true">
 				<p hidden><label>Don’t fill this out if you’re human: <input type="text" placeholder="name"
@@ -340,14 +342,15 @@
 				</blockquote>
 				</p>
 
+				<hr>
 				<footer>
-					Nathan &#183; 2018-2024 &#183;
-					<a href="/feed"><img src="/assets/buttons/rss.svg" alt="rss icon"
-							style="float:right;width:20px;height:20px;"></a>
-					<a href="https://fediring.net/previous?host=polarhive.net">&lt;-</a> <a
-						href="https://fediring.net/">fediring</a> <a
-						href="https://fediring.net/next?host=polarhive.net">-></a>
+					<div class="webring"><a href="https://fediring.net/previous?host=polarhive.net">&lt;-</a> <a
+							href="https://fediring.net/">fediring</a> <a
+							href="https://fediring.net/next?host=polarhive.net">-></a>
+						<div style="float:right;"><a href="/feed">/feed</a></div>
+					</div>
 				</footer>
+	</main>
 </body>
 
 </html>

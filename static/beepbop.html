@@ -1,26 +1,79 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta http-equiv="refresh" content="2; url=/">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easter Egg</title>
+    <style>
+        :root {
+            --sans-serif: "InterVar", sans-serif;
+            --mono: "Input Mono", "JetBrains Mono", monospace;
+        }
+
+        body {
+            padding: 20px;
+            overflow: hidden;
+            background: black;
+            color: rgb(17, 224, 17);
+            font-family: var(--mono);
+        }
+
+        .matrix {
+            position: absolute;
+            overflow: hidden;
+            z-index: -1;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const lyrics = [
+                "Plug it, play it, burn it, rip it, Drag and drop it, zip - unzip it",
+                "Buy it, use it, break it, fix it, Trash it, change it, mail - upgrade it",
+                "Charge it, point it, zoom it, press it, Snap it, work it, quick - erase it",
+                "Mine it, craft it, build it, dig it, Stack it, smelt it, enchant - brew it",
+                "Fight it, slay it, loot it, trade it, Craft it, build it, survive - thrive it",
+                "Spawn it, farm it, shear it, milk it, Cook it, eat it, sleep - respawn it"
+            ];
+
+            const lyric = lyrics[Math.floor(Math.random() * lyrics.length)];
+            document.body.insertAdjacentHTML('beforeend', `<h3>${lyric}</h3>`);
+
+            const canvas = document.createElement('canvas');
+            canvas.className = 'matrix';
+            document.body.appendChild(canvas);
+
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            const fontSize = 16;
+            const columns = canvas.width / fontSize;
+            const drops = Array(Math.floor(columns)).fill(1);
+
+            function draw() {
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = '#0F0';
+                ctx.font = `${fontSize}px monospace`;
+
+                for (let i = 0; i < drops.length; i++) {
+                    const text = letters[Math.floor(Math.random() * letters.length)];
+                    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                    if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                        drops[i] = 0;
+                    }
+                    drops[i]++;
+                }
+            }
+            setInterval(draw, 33);
+        });
+    </script>
 </head>
 
 <body>
-    <h1>
- 
-<pre>
-   _________________________________________
-  / If debugging is the process of removing \
-  | bugs, then programming must be the      |
-  \ process of putting them in.             /
-   -----------------------------------------
-          \   ^__^
-           \  (oo)\_______
-              (__)\       )\/\
-                  ||----w |
-                  ||     ||
- </pre>
- </h1>
 </body>
 
 </html>

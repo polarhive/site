@@ -1,3 +1,8 @@
+:root {
+  --sans-serif: "InterVar", sans-serif;
+  --mono: "Input Mono", "JetBrains Mono", monospace;
+}
+
 @supports (font-variation-settings: normal) {
   :root {
     font-family: var(--sans-serif);
@@ -19,12 +24,6 @@
   font-weight: 100 900;
   font-style: italic;
   src: url("Inter-Italic.var.woff2") format("woff2");
-}
-
-:root {
-  --sans-serif: "InterVar", sans-serif;
-  --mono: "JetBrains Mono", "JetBrainsMono NF", "Input Mono", monospace;
-  font-family: var(--sans-serif);
 }
 
 html.lenis,
