@@ -1,3 +1,4 @@
 /resources/_gen
+/.obsidian/
 /public/
 /.hugo_build.lock
