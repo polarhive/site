@@ -60,7 +60,7 @@ button {
 }
 
 textarea {
-    width: 273px;
+    width: auto;
 }
 
 a {
@@ -149,6 +149,5 @@ button,
 textarea,
 input {
     color: var(--text-color);
-    font-size: large;
     background-color: var(--background);
 }
