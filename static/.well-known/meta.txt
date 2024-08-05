@@ -1,9 +1,9 @@
+
 polarhive.net
 -------------
 • host: Netlify
-• ssg: anna / hugo 🍚
-• css: water.css
-• license: MIT (code) + CC BY-NC-SA (content)
+• ssg: hugo + anna 🍚
+• license: MIT (code) / CC BY-NC-SA (content)
 
 MIT License
 -----------
@@ -29,6 +29,5 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 --
+[0]: https://api.netlify.com/api/v1/badges/17f6c9ff-7869-439f-bbf6-ec3b905e03f9/deploy-status
 [1]: https://github.com/acmpesuecc/anna
-[2]: https://github.com/polarhive/sushi
-[0]: https://api.netlify.com/api/v1/badges/17f6c9ff-7869-439f-bbf6-ec3b905e03f9/deploy-status 
