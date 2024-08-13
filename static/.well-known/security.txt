@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA256
+Hash: SHA512
 
 Contact: mailto:mail@polarhive.net
 Contact: https://polarhive.net/contact
-Expires: 2024-06-30T18:30:00.000Z
+Expires: 2025-06-30T18:30:00.000Z
 Encryption: https://polarhive.net/.well-known/polarhive_gpg.txt
 Canonical: https://polarhive.net/.well-known/security.txt
 -----BEGIN PGP SIGNATURE-----
 
-iHUEARYIAB0WIQRWUGe+STNd9bLdgRx42/vosyWlqQUCZKJ4ggAKCRB42/vosyWl
-qSrCAQCTfCqGlEOSBMjyuL3XlzQEuSwW1sykU6nSb2xUmwrcdQD+NJE4mJOqkHSo
-VnveIesf3dgtKna9rml7SYaI7acG9w4=
-=9Xco
+iHUEARYKAB0WIQRWUGe+STNd9bLdgRx42/vosyWlqQUCZrukJgAKCRB42/vosyWl
+qXgnAP0SfY6NhWQNX1AR5XAcVjm5YiM2meRq1nnW62Ux34rbOwEAud1SVFtWppzC
+dWBD8+SfEP40fQ+0Wr08hx/T1IKFmgw=
+=kQNc
 -----END PGP SIGNATURE-----
