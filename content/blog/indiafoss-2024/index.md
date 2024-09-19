@@ -9,7 +9,7 @@ author: Nathan Paul @polarhive
 
 This was my first FOSS conference I'd been to. My friends, and seniors from college were nudging me to purchase a ticket pretty early on. Unfortunately, I did not and missed out on the discounted student ticket. I was lucky enough to find someone who was willing to transfer their ticket last moment who I found in the FOSS United Telegram chatroom.
 
-The atmosphere! I caught the first bus to Nimhans that took me about 30 minutes to get to the bus-stop. I was pretty early I would say, I took a round of the venue and looked at a bunch of stalls. 
+The atmosphere! I caught the first bus to Nimhans that took me about 30 minutes to get to the bus-stop. I was pretty early I would say, I took a round of the venue and looked at a bunch of stalls.
 
 The demographic who showed up early, at the event were volunteers and college students from places outside of BLR. The check-in was smooth and ran on frappe. They were mostly volunteers from various different FOSS United communities around India.
 
@@ -34,7 +34,7 @@ The first stall I had been to was [Mecha](https://mecha.so) it was a startup bui
 
 ## The Conference
 
-The first talk was by [Vishnu Mohandas](https://vishnu.tech/), [Ente](https://ente.io/). They make a FOSS Google Photos alternative which is E2E encrypted and had a polished UI. Their primary userbase is the typical FOSS, privacy concious degoogler crowd. The slides say you need to market and build a userbase before you build a product and scale up. Fun fact, he used to work at Google, Switzerland but left that cushy job to build ente.
+The first talk was by [Vishnu Mohandas](https://vishnu.tech/), [Ente](https://ente.io/). They make a FOSS Google Photos alternative which is E2E encrypted and had a polished UI. Their primary userbase is the typical FOSS, privacy conscious degoogler crowd. The slides say you need to market and build a userbase before you build a product and scale up. Fun fact, he used to work at Google, Switzerland but left that cushy job to build ente.
 
 ![ente talk](ente.jpg)
 
@@ -68,6 +68,8 @@ I bought a small 3D printed whistle from the person at the booth and his smart k
 
 Nikhil and Madhav took part and wont the wikirace. Nikhil is also known as [@heftymouse](https://heftymouse.me) online. Sasank as [@decentparadox](https://decentparadox.site) I know Nikhil from my JEE/high-school days. They're a part of [bi0s](https://bi0s.in/): a infosec/CTF club at their college.
 
+I also met [Pranavjeet](https://github.com/Pranavjeet-Naidu), and [Shailja](https://github.com/euphoricair7) from college, I accompanied them for the Mecha and UrbanEmissions talks.
+
 ![wiki race](wiki.jpg)
 
 ##  A lightsaber: ft. [absurd.industries](https://absurd.industries/)
@@ -75,6 +77,10 @@ Nikhil and Madhav took part and wont the wikirace. Nikhil is also known as [@hef
 ![Anirudh Sudhir](sudhir.jpg)
 
 ![Aditya Hegde](heg.jpg)
+
+> [Anirudh](https://sudhir.live) and [Aditya](https://hegde.live), we attend the same college and have worked on [anna](/blog/anna)
+
+---
 
 ## e-ink
 
@@ -103,7 +109,7 @@ Ivan talked about YDB, a distributed SQL database --- its fault tolerance model,
 
 ## Early Linux/FOSS communities in india
 
-I was there for the Frederick Noronha talk. I noticed his [youtube](https://yewtu.be/channel/UCxgCSgUVEG8QZGToC795wGQ) channel which he was interviewing people around, check it out. He is also publishing a magazine about FOSS contributions from India and the history of the FOSS movement in India.
+I was there for the Frederick Noronha talk. I noticed his [youtube](https://yewtu.be/channel/UCxgCSgUVEG8QZGToC795wGQ) channel where he interviewed people around, check it out. He is also publishing a magazine about FOSS contributions from India and the history of the FOSS movement in India.
 
 ![FN](lug.jpg)
 
@@ -115,7 +121,7 @@ Harish talked about game emulators, the early hackers and archivists who would g
 
 ![distro tierlist](tier.jpg)
 
-This stall was setup by [Mukti](MuktiCommunity.github.io) a FOSS club which originally started in Ramiah. The stall likely had the highest engagement rate. You could drop by at any time during the day to modify the tier list—a FOSS tierlist dare I say?
+This stall was setup by [Mukti](MuktiCommunity.github.io) a FOSS club which originally started in Ramaiah. The stall likely had the highest engagement rate. You could drop by at any time during the day to modify the tier list—a FOSS tierlist dare I say?
 
 They also had a couple of USB sticks ready with distros of your choice in case you needed help flashing Linux on your PC.
 
@@ -127,12 +133,12 @@ I did not stay back for the final closing keynote and left after Kailash's talk.
 
 ![postgres](post.jpg)
 
-He talked about how they use [dungbeetle](https://github.com/zerodha/dungbeetle) an internal middleware tool Zerodha developed to manage rush-hour tax-filing report generation on their stock broking platform.
+He talked about how they use [dungbeetle](https://github.com/zerodha/dungbeetle) an internal middleware tool Zerodha developed to manage rush-hour tax-filing report generation for their stock broking platform.
 
 ## In summary
 
 FOSS, Policy (lil bit of AI), Sustainability. I feel this was the theme around this year's IndiaFOSS. I loved how 
-they asked us to bring our own water bottles, napkins and reduce any time time plastic or paper waste. Overall, 
+they asked us to bring our own water bottles, napkins and reduce any one time plastic or paper waste. Overall, 
 the event was very well-organized, though I felt like I had explored all the stalls by the end of day one.
 
 There were many more talks that I had attended, but did not document pictures of; a full list of speakers and a video recording of the event can be found on the IndiaFOSS [website](https://fossunited.org/dashboard/schedule/indiafoss24).
@@ -140,3 +146,6 @@ There were many more talks that I had attended, but did not document pictures of
 ![iff poster](iff.jpg)
 
 > P.S. We used ente to host and share all these pictures internally :)
+
+It feels great I could attend such a vibrant event right at home in BLR.
+
