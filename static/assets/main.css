@@ -5,7 +5,6 @@
     word-wrap: break-word;
 }
 
-
 :root {
     --sans-serif: "InterVar", sans-serif;
     --mono: "Input Mono", "JetBrains Mono", monospace;
@@ -150,4 +149,11 @@ textarea,
 input {
     color: var(--text-color);
     background-color: var(--background);
+}
+
+img[name="imageNeko0"] {
+    margin-block: 0;
+    display: inline;
+    max-width: none;
+    border-radius: 0;
 }
