@@ -1,45 +1,46 @@
-------------------------------------------
+-----------------------------------------
 Things to do at least once in a lifetime!
-[-] 3D print
-[-] Attend a KKB concert
-[-] Attend a conference
-[-] Attend one of the Olympics
-[-] Become financially independent
-[-] Build a custom PC
-[-] Build a snowman
-[-] Build an indie web browser not built on Chromium/WebKit/Gecko
-[-] Build an off-grid sustainable house
-[-] Contribute to KDE and libre software
-[-] Decode hardwarde / reverse engineer using assembly
-[-] Earn a scholarship
-[-] Freelance before graduating
-[-] Get a DSLR / mirrorless camera
-[-] Go go-karting
-[-] Go sailing
-[-] Install Gentoo
-[-] Interview RMS
-[-] Learn Latin — to know about words (etymology)
-[-] Learn R-lang
-[-] Learn to swim
-[-] Make popcorn from scratch
-[-] Participate in a mapathon
-[-] Pet an otter
-[-] Produce a documentary film
-[-] Produce my own music
-[-] Publish an F-Droid app
-[-] Rebuild my website
-[-] Teach physics & CS to build scientific temper
-[-] Travel with a stranger
-[-] Visit the Rain Vortex at Changi Airport, Singapore
-[x] Completely switch to RSS feeds
-[x] Document my life in a GitBook
-[x] Get a Dog
-[x] Get a PGP key
-[x] Give a talk
-[x] Help peopl learn about libre software / privacy
-[x] Help people in my matrix community
-[x] Join a webring
-[x] Learn from the best hackers (playfully clever people) in the realm of Computer Science
+[-] attend a KKB concert
+[-] attend the Olympics
+[-] become financially-independent
+[-] build a custom PC
+[-] build a snowman
+[-] build an indie web browser not built on Chromium/WebKit/Gecko
+[-] build an off-grid sustainable house
+[-] contribute to KDE and libre software
+[-] decode hardware locks / reverse-engineer assembly
+[-] earn a scholarship
+[-] freelance (before graduating)
+[-] get a DSLR / mirrorless camera
+[-] go Go-Karting
+[-] go sailing
+[-] install Gentoo
+[-] install OpenBSD
+[-] interview RMS
+[-] learn Latin — to know about words (etymology)
+[-] learn R-lang + LaTeX
+[-] learn to swim
+[-] make popcorn from scratch
+[-] participate in a mapathon
+[-] pet an otter
+[-] produce a documentary film
+[-] produce my own music
+[-] publish an F-Droid app
+[-] teach physics & CS to build scientific temper
+[-] travel with a stranger
+[-] visit the Rain Vortex at Changi Airport, Singapore
+[x] 3D print (saw it irl)
+[x] attend a conference
+[x] completely switch to RSS feeds
+[x] get a Dog
+[x] get a PGP key
+[x] give a talk
+[x] gocument my life in a GitBook
+[x] help people in my matrix community
+[x] help people learn about libre software / privacy
+[x] join a webring
+[x] learn from the best hackers (playfully clever people) in CS
 [x] learn to drive a car
 [x] participate in a hackathon
+[x] rebuild my website
 [x] self host services at home
