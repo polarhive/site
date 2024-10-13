@@ -213,7 +213,7 @@ package = "@netlify/plugin-sitemap"
 
 [[redirects]]
   from = "/arch.sh"
-  to = "https://codeberg.org/polarhive/dots/raw/branch/main/install.sh"
+  to = "https://codeberg.org/polarhive/dots/raw/branch/old/install.sh"
   status = 301
   force = true
 
