@@ -6,3 +6,4 @@ disableKinds = ["taxonomy"]
 [author]
   name = 'Nathan Paul'
   email = 'mail@polarhive.net'
+renderer.unsafe = 'true'
