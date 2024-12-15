@@ -210,6 +210,8 @@ You'll notice how the repo is called knowledge but the actual content is two lev
 
 Using quartz+[netlify](https://github.com/polarhive/site/blob/main/setup.sh) I deploy an online sub-set of my vault -- it contains notes only from the wiki and uni directory which points to my [UE23CS](/ue23cs) repository for university coursework.
 
+![wiki](wiki.png)
+
 This way I get to share some parts of my wiki with the world. I just gitignore all the personal notes and `todo.txt` bookmarks. I also gitignore all symlinks and don't push them to git. For the wiki --- the netlify script just clones the repos I want and `mv` them into the content repo and before building the site.
 
 The cool part is all these tools work independently and you don't have to use Obsidian in the first place. But Quartz shares a similar design with the graph view and supports RSS feed updated whenever I add a new entry. It also looks really cool btw as your vault becomes bigger.
