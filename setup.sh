@@ -1,7 +1,7 @@
 #!/bin/bash
 hugo; rm -rf knowledge UE23CS /tmp/UE23CS /tmp/ideas
 curl -L -o public/assets/résumé.pdf https://raw.githubusercontent.com/polarhive/resume/refs/heads/main/r%C3%A9sum%C3%A9.pdf
-mkdir -p public/static/gradeshade; curl -L -o public/static/gradeshade/index.html https://raw.githubusercontent.com/polarhive/gradeshade/refs/heads/main/index.html
+mkdir -p public/gradeshade; curl -L -o public/gradeshade/index.html https://raw.githubusercontent.com/polarhive/gradeshade/refs/heads/main/index.html
 git clone --depth=1 https://github.com/polarhive/knowledge
 git clone --depth=1 https://github.com/polarhive/UE23CS /tmp/UE23CS
 git clone --depth=1 https://github.com/polarhive/ideas /tmp/ideas
