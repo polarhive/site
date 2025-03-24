@@ -22,15 +22,13 @@
 
 		<h2 id="log">Sign my guestbook! </h2>
 		<fieldset>
-			<form name="guestbook" method="POST" action="/form" netlify-honeypot="bot-field" data-netlify="true">
-				<p hidden><label>Don’t fill this out if you’re human: <input type="text" placeholder="name"
-							name="bot-field"></label></p>
-				<p><label>be anonymous? </label><input type="checkbox" id="anonymous" name="anonymous" unchecked></p>
-				<p><input type="text" name="name" placeholder="name"></p>
-				<p><input type="text" name="email" placeholder="showcase your website/socials"></p>
-				<p><textarea name="message" placeholder="message"></textarea></p>
-				<p><button>Send</button></p>
-			</form>
+		<form action="mailto:guestbook@polarhive.net?subject=[gb entry]" method="POST" enctype="text/plain">
+    		<p><label>Be anonymous? </label><input type="checkbox" name="anonymous"></p>
+    		<p><input type="text" name="name" placeholder="name"></p>
+    		<p><input type="text" name="email" placeholder="showcase your website/socials"></p>
+    		<p><textarea name="message" placeholder="message"></textarea></p>
+    		<p><button type="submit">Send</button></p>
+		</form>
 		</fieldset>
 
 		<hr>

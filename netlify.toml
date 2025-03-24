@@ -32,18 +32,6 @@ package = "@netlify/plugin-sitemap"
   force = true
 
 [[redirects]]
-  from = "/afk"
-  to = "/contact"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/crypto"
-  to = "/donate"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "/apple"
   to = "/blog/apple"
   status = 301
@@ -64,12 +52,6 @@ package = "@netlify/plugin-sitemap"
 [[redirects]]
   from = "/browsers"
   to = "/blog/firefox"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/blogroll"
-  to = "/contact"
   status = 301
   force = true
 
@@ -202,18 +184,6 @@ package = "@netlify/plugin-sitemap"
 [[redirects]]
   from = "https://blog.polarhive.net/*"
   to = "https://polarhive.net/blog"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://git.polarhive.net/*"
-  to = "/git"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/arch.sh"
-  to = "https://codeberg.org/polarhive/dots/raw/branch/old/install.sh"
   status = 301
   force = true
 

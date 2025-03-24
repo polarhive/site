@@ -24,14 +24,12 @@
             <video src="/assets/glitch.mp4" class="video-circle" autoplay muted loop alt="profile picture">
         </h1>
         <nav>
-            <h2>Say 👋</h2>
-            <form action='/form' method='POST' name='contact'><input type='hidden' name='form-name' value='contact' />
-                <p hidden><label>Don’t fill this out if you're human: <input type="text" placeholder="name"
-                            name="bot-field"></label></p>
-                <p><textarea name="message" placeholder="Hi!"></textarea></p>
-                <p><input type="text" name="email" placeholder="email: if you're seeking a reply"></p>
-                <p><button>Send</button></p>
-            </form>
+        <h2>Say 👋</h2>
+		<form action="mailto:contact@polarhive.net?subject=[contact form]" method="POST" enctype="text/plain">
+            <p><textarea name="message" placeholder="Hi!"></textarea></p>
+            <p><input type="text" name="email" placeholder="email: if you're seeking a reply"></p>
+            <p><button type="submit">Send</button></p>
+        </form>
         </nav>
     </header>
     <main>
