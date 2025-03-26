@@ -1,11 +1,11 @@
 polarhive.net
 -------------
-• host: Netlify
-• css: me
+• host: Cloudflare Pages + Netlify
 • ssg: hugo + quartz (wiki)
 • license: GPLv3 (code) / CC BY-NC-SA 4.0 (content)
+• css: me
 
 --
-[0]: https://api.netlify.com/api/v1/badges/17f6c9ff-7869-439f-bbf6-ec3b905e03f9/deploy-status
+[0]: https://api.netlify.com/api/v1/badges/317a0b8d-dafe-4eea-8b97-6324bb48f313/deploy-status
 [1]: https://github.com/jackyzha0/quartz
 
