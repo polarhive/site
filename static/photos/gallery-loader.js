@@ -82,15 +82,25 @@ class PhotoGalleryLoader {
         }
 
         try {
-            const response = await fetch('/photos/photos.json');
+            console.log('Fetching photos.json...');
+            // Use the full path for testing
+            const jsonUrl = this.jsonUrl || '/photos/photos.json';
+            console.log('JSON URL:', jsonUrl);
+            
+            const response = await fetch(jsonUrl);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
+            
+            console.log('Response received, parsing JSON...');
             this.photosData = await response.json();
+            console.log('JSON parsed successfully:', this.photosData);
+            
             this.isLoaded = true;
             return this.photosData;
         } catch (error) {
             console.error('Error fetching photos.json:', error);
+            console.error('Fetch URL:', this.jsonUrl);
             throw error;
         }
     }
@@ -119,7 +129,7 @@ class PhotoGalleryLoader {
         
         const percent = Math.round((loaded / total) * 100);
         this.progressBar.style.width = `${percent}%`;
-        this.progressText.textContent = `Loading: ${loaded}/${total} (${percent}%)`;
+        this.progressText.textContent = `Scroll more: ${loaded}/${total} (${percent}%)`;
         
         if (loaded === total) {
             // Fade out progress after a delay
@@ -380,49 +390,111 @@ class PhotoGalleryLoader {
         const photoElement = document.createElement('div');
         photoElement.className = 'photo-item';
         
-        const img = document.createElement('img');
-        img.src = photoData.src;
-        img.alt = photoData.alt || '';
-        img.title = photoData.title || '';
-        img.className = 'loading';
-        img.setAttribute('data-id', photoData.id);
+        // Create placeholder div with same aspect ratio as image
+        const placeholder = document.createElement('div');
+        placeholder.className = 'image-placeholder loading';
+        placeholder.setAttribute('data-id', photoData.id);
+        placeholder.setAttribute('data-src', photoData.src);
+        placeholder.setAttribute('data-alt', photoData.alt || '');
+        placeholder.setAttribute('data-title', photoData.title || '');
         
-        // Add load event to remove loading class
-        img.addEventListener('load', () => {
-            img.classList.remove('loading');
-        });
+        // Add a small spinner or loading indicator
+        const loadingIndicator = document.createElement('div');
+        loadingIndicator.className = 'placeholder-loading-indicator';
+        placeholder.appendChild(loadingIndicator);
         
-        // Add error handling
-        img.addEventListener('error', () => {
-            img.classList.remove('loading');
-            img.classList.add('error');
-            console.error(`Failed to load image: ${photoData.src}`);
-            
-            // Add click event to retry loading
-            img.addEventListener('click', (e) => {
-                if (img.classList.contains('error')) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    img.classList.remove('error');
-                    img.classList.add('loading');
-                    img.src = img.src.split('?')[0] + '?retry=' + new Date().getTime();
-                    console.log(`Retrying image: ${photoData.src}`);
-                }
-            }, { once: false });
-        });
-        
-        // Add click event to show larger image
-        img.addEventListener('click', (e) => {
-            if (!img.classList.contains('error')) {
-                e.preventDefault();
-                e.stopPropagation();
-                this.showImageInViewer(photoData.src, photoData.title, photoData.alt, photoData.id);
-            }
-        });
-        
-        photoElement.appendChild(img);
+        // Apply the lazy loading via Intersection Observer later
+        photoElement.appendChild(placeholder);
         
         return photoElement;
+    }
+    
+    // This method loads the actual image when it's in the viewport
+    setupImageLazyLoad(placeholder) {
+        const imgObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const placeholder = entry.target;
+                    const photoData = {
+                        id: placeholder.getAttribute('data-id'),
+                        src: placeholder.getAttribute('data-src'),
+                        alt: placeholder.getAttribute('data-alt'),
+                        title: placeholder.getAttribute('data-title')
+                    };
+                    
+                    // Create the actual image element
+                    const img = document.createElement('img');
+                    img.className = 'loading';
+                    img.alt = photoData.alt;
+                    img.title = photoData.title;
+                    img.setAttribute('data-id', photoData.id);
+                    
+                    // Add load event to remove loading class
+                    img.addEventListener('load', () => {
+                        img.classList.remove('loading');
+                        placeholder.classList.remove('loading');
+                        placeholder.classList.add('loaded');
+                        
+                        // Track loading progress
+                        this.loadedImages++;
+                        console.log(`Image loaded: ${this.loadedImages}/${this.totalImages}`);
+                        this.updateProgress(this.loadedImages, this.totalImages);
+                        
+                        // Add click event to show larger image (only after load)
+                        placeholder.addEventListener('click', (e) => {
+                            if (!placeholder.classList.contains('error')) {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                this.showImageInViewer(photoData.src, photoData.title, photoData.alt, photoData.id);
+                            }
+                        });
+                    });
+                    
+                    // Add error handling
+                    img.addEventListener('error', () => {
+                        img.classList.remove('loading');
+                        img.classList.add('error');
+                        placeholder.classList.remove('loading');
+                        placeholder.classList.add('error');
+                        console.error(`Failed to load image: ${photoData.src}`);
+                        
+                        // Track loading progress (errors count as "loaded" for progress)
+                        this.loadedImages++;
+                        console.log(`Image error: ${this.loadedImages}/${this.totalImages}`);
+                        this.updateProgress(this.loadedImages, this.totalImages);
+                        
+                        // Add click event to retry loading
+                        placeholder.addEventListener('click', (e) => {
+                            if (placeholder.classList.contains('error')) {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                placeholder.classList.remove('error');
+                                placeholder.classList.add('loading');
+                                img.classList.remove('error');
+                                img.classList.add('loading');
+                                img.src = photoData.src.split('?')[0] + '?retry=' + new Date().getTime();
+                                console.log(`Retrying image: ${photoData.src}`);
+                            }
+                        });
+                    });
+                    
+                    // Actually set the source to start loading the image
+                    img.src = photoData.src;
+                    placeholder.appendChild(img);
+                    
+                    // Stop observing once the loading process has begun
+                    imgObserver.unobserve(placeholder);
+                    
+                    // Add debugging info
+                    console.log(`Starting to load image: ${photoData.src}`);
+                }
+            });
+        }, {
+            rootMargin: '300px', // Start loading when image is 300px from viewport
+            threshold: 0.01
+        });
+        
+        imgObserver.observe(placeholder);
     }
 
     // Shuffle the photos array for randomized display
@@ -447,6 +519,24 @@ class PhotoGalleryLoader {
         });
         
         return fragment;
+    }
+    
+    setupAllImagesLazyLoad() {
+        // Find all placeholders and set up lazy loading
+        const placeholders = this.galleryContainer.querySelectorAll('.image-placeholder');
+        console.log(`Setting up lazy loading for ${placeholders.length} images`);
+        
+        // Store the total in the instance for progress tracking
+        this.totalImages = placeholders.length;
+        this.loadedImages = 0;
+        
+        // Update progress with initial state
+        this.updateProgress(this.loadedImages, this.totalImages);
+        
+        // Set up lazy loading for each placeholder
+        placeholders.forEach(placeholder => {
+            this.setupImageLazyLoad(placeholder);
+        });
     }
 
     async renderPhotoGallery() {
@@ -482,38 +572,14 @@ class PhotoGalleryLoader {
                     this.galleryContainer.style.opacity = '1';
                 });
                 
-                // Track image loading progress
-                const allImages = this.galleryContainer.querySelectorAll('img');
-                const totalImages = allImages.length;
-                let loadedImages = 0;
+                // Set up lazy loading for all images
+                this.setupAllImagesLazyLoad();
                 
-                // Update progress with initial state
-                this.updateProgress(loadedImages, totalImages);
-                
-                allImages.forEach(img => {
-                    if (img.complete) {
-                        img.classList.remove('loading');
-                        loadedImages++;
-                        this.updateProgress(loadedImages, totalImages);
-                    } else {
-                        img.addEventListener('load', () => {
-                            img.classList.remove('loading');
-                            loadedImages++;
-                            this.updateProgress(loadedImages, totalImages);
-                        });
-                        
-                        img.addEventListener('error', () => {
-                            img.classList.remove('loading');
-                            img.classList.add('error');
-                            loadedImages++;
-                            this.updateProgress(loadedImages, totalImages);
-                        });
-                    }
-                });
-                
-                // Dispatch an event to notify that the gallery has loaded
-                const event = new CustomEvent('galleryLoaded');
+                // Dispatch an event to notify that the gallery structure has loaded
+                const event = new CustomEvent('galleryStructureLoaded');
                 this.galleryContainer.dispatchEvent(event);
+                
+                // Monitor actual image loading in the setupImageLazyLoad method
             }
             
         } catch (error) {
@@ -525,15 +591,23 @@ class PhotoGalleryLoader {
 
 // Initialize when DOM is ready
 document.addEventListener("DOMContentLoaded", function() {
-    // Create global instance
-    window.photoGalleryLoader = new PhotoGalleryLoader();
+    // Find the gallery container
+    const galleryContainer = document.getElementById('photo-gallery');
     
-    // Set up lazy loading
-    if (window.photoGalleryLoader.lazyLoadingEnabled) {
-        window.photoGalleryLoader.init();
-    } else {
-        window.photoGalleryLoader.initialize();
+    if (!galleryContainer) {
+        console.error('Gallery container not found! Make sure there is an element with id="photo-gallery"');
+        return;
     }
+    
+    console.log('Gallery container found:', galleryContainer);
+    
+    // Create global instance with explicit parameters
+    window.photoGalleryLoader = new PhotoGalleryLoader(galleryContainer, '/photos/photos.json');
+    
+    console.log('Photo gallery loader created');
+    
+    // Load the gallery content immediately
+    window.photoGalleryLoader.initialize();
     
     console.log('Photo gallery loader initialized');
 });

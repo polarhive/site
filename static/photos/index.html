@@ -28,6 +28,10 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      console.log('DOM loaded - checking for gallery container');
+      const galleryContainer = document.getElementById('photo-gallery');
+      console.log('Gallery container:', galleryContainer);
+      
       // Add keyboard navigation to close image viewer with Escape key
       window.addEventListener('keydown', (event) => {
         if (event.key === 'Escape') {
@@ -37,6 +41,7 @@
           }
         }
       });
+      
     });
   </script>
 

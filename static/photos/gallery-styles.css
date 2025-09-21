@@ -8,34 +8,68 @@
   column-gap: 12px;
 }
 
-.image-grid img {
-  all: unset;
-  object-fit: cover;
+.image-placeholder {
   position: relative;
   width: calc(100% - 4px);
   margin-bottom: 10px;
-  cursor: pointer;
   border-radius: 0.25rem;
   padding: 2px;
-  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.3));
-  transition: transform 0.2s ease-in-out, opacity 0.3s ease;
+  height: 260px; /* Default height before image loads */
+  background-color: rgba(240, 240, 240, 0.2);
+  overflow: hidden;
 }
 
-.image-grid img.loading {
-  opacity: 0.6;
+.image-placeholder.loading {
   background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(240,240,240,0.5) 50%, rgba(255,255,255,0) 100%);
   background-size: 200% 100%;
   animation: loading-shine 1.5s infinite ease-in-out;
 }
 
-.image-grid img.error {
+.placeholder-loading-indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(150, 150, 150, 0.2);
+  border-top: 3px solid rgba(150, 150, 150, 0.8);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.image-grid img {
+  all: unset;
+  object-fit: cover;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  transition: transform 0.2s ease-in-out, opacity 0.3s ease;
+}
+
+.image-grid img.loading {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-placeholder.loaded img {
+  opacity: 1;
+}
+
+.image-placeholder.loaded .placeholder-loading-indicator {
+  display: none;
+}
+
+.image-placeholder.error {
   opacity: 0.8;
   background-color: rgba(255, 0, 0, 0.1);
   position: relative;
   cursor: pointer;
 }
 
-.image-grid img.error::before {
+.image-placeholder.error::before {
   content: "⟳";
   position: absolute;
   top: 50%;
@@ -43,16 +77,24 @@
   transform: translate(-50%, -50%);
   font-size: 32px;
   color: rgba(255, 0, 0, 0.7);
-  z-index: 1;
+  z-index: 2;
 }
 
-.image-grid img.error:hover {
+.image-placeholder.error .placeholder-loading-indicator {
+  display: none;
+}
+
+.image-placeholder.error:hover {
   opacity: 0.9;
   background-color: rgba(255, 0, 0, 0.15);
 }
 
-.image-grid img.error:hover::before {
+.image-placeholder.error:hover::before {
   color: rgba(255, 0, 0, 0.9);
+}
+
+.image-grid img.error {
+  opacity: 0;
 }
 
 /* Gallery Progress Bar */
@@ -227,6 +269,15 @@
   }
   100% {
     background-position: 200% 0;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 
