@@ -1,0 +1,382 @@
+{
+  "photos": [
+    {
+      "id": "1",
+      "src": "/blog/2023/bridge.jpg",
+      "title": "Bridge",
+      "alt": "A bridge"
+    },
+    {
+      "id": "2",
+      "src": "/blog/2023/cafe.jpg",
+      "title": "Cafe",
+      "alt": "A cafe"
+    },
+    {
+      "id": "3",
+      "src": "/blog/eighteen/walk.jpg",
+      "title": "Walk",
+      "alt": "A walk"
+    },
+    {
+      "id": "4",
+      "src": "/blog/jukebox/back.jpg",
+      "title": "Jukebox",
+      "alt": "Jukebox background"
+    },
+    {
+      "id": "5",
+      "src": "/blog/summer/cats.jpg",
+      "title": "Cats",
+      "alt": "Cats in summer"
+    },
+    {
+      "id": "6",
+      "src": "/blog/summer/station.jpg",
+      "title": "Station",
+      "alt": "Summer station"
+    },
+    {
+      "id": "7",
+      "src": "/blog/summer/train.jpg",
+      "title": "Train",
+      "alt": "Summer train"
+    },
+    {
+      "id": "8",
+      "src": "/assets/diesel_five.jpg",
+      "title": "Diesel Five",
+      "alt": "Diesel five"
+    },
+    {
+      "id": "9",
+      "src": "/blog/2023/diesel.jpg",
+      "title": "Diesel",
+      "alt": "Diesel in a car"
+    },
+    {
+      "id": "10",
+      "src": "/blog/2023/tree.jpg",
+      "title": "Cubbon Park",
+      "alt": "Cubbon Park"
+    },
+    {
+      "id": "11",
+      "src": "https://pixelfed.social/storage/m/_v2/170801569502203904/758e75a50-ddd61a/Dm2TIk59KviR/hc5h9iN4jFpaq2Zv9tKQVHYMTa2NQEiQUoz3Gb97.jpg",
+      "title": "IISC",
+      "alt": "IISC building"
+    },
+    {
+      "id": "12",
+      "src": "https://pixelfed.social/storage/m/_v2/170801569502203904/758e75a50-ddd61a/5HnzxM9SIG23/2PI2AzeLq17NccwhqGOVySdkMUfMJsRF529g8aHE.jpg",
+      "title": "IISC",
+      "alt": "IISC building"
+    },
+    {
+      "id": "13",
+      "src": "https://pixelfed.social/storage/m/_v2/170801569502203904/758e75a50-ddd61a/UE73Or4VHqjX/0cd1pnp28DgViCCuqIM1RRs9WTXRz2bhZ3MuwuAm.jpg",
+      "title": "IISC",
+      "alt": "IISC building"
+    },
+    {
+      "id": "14",
+      "src": "https://pixelfed.social/storage/m/_v2/170801569502203904/758e75a50-ddd61a/7VJtmNWwib3u/Xqm8PkUzMi90dHbzNJXB9Unai2v5DyySP4cCWuvT.jpg",
+      "title": "Baptized in fear",
+      "alt": "Doxie cooling off in the sun"
+    },
+    {
+      "id": "15",
+      "src": "https://pixelfed.social/storage/m/_v2/170801569502203904/758e75a50-ddd61a/w2CN9RPRnZeU/5rQthoioBdK92bBeHAXKHLPleklxZWntNvJlPH9b.jpg",
+      "title": "Pink Poui Tree",
+      "alt": "Pink poui tree"
+    },
+    {
+      "id": "16",
+      "src": "https://pixelfed.social/storage/m/_v2/170801569502203904/83a90637a-595111/20wWCHP3cM2p/GJVq5PuwrpWaGLP6trVqaJsB3kH3IKaGGMLLGpBz.jpg",
+      "title": "Happy New Year! #2021",
+      "alt": "Kitten under the fridge"
+    },
+    {
+      "id": "17",
+      "src": "https://pixelfed-prod.nyc3.cdn.digitaloceanspaces.com/public/m/_v2/170801569502203904/7198ec0c0-99bc91/s3oc5jIXk0aR/LWlzBqiVdJJEzKSOP9Z9sGffNXTU6Ly3NzHewWAc.jpg",
+      "title": "KL // 2021",
+      "alt": "A black wooden boat docked in a canal. Photo taken at Kerala, India."
+    },
+    {
+      "id": "18",
+      "src": "https://pxscdn.com/public/m/_v2/170801569502203904/7c649620b-69b6c5/ndDWminQUMkB/INMxkrK0LCjykyIYVL87spU0M870Lm4LcegEzxUJ.jpg",
+      "title": "OpenBSD puffy",
+      "alt": "OpenBSD puffy"
+    },
+    {
+      "id": "19",
+      "src": "https://pxscdn.com/public/m/_v2/170801569502203904/3b17271c9-2ea36d/88r1Ihwg08y5/h4kOTmNJTAfimh2fGeYwEAj3HyNGE0v0Tn45T9WI.jpg",
+      "title": "Blur",
+      "alt": "Blur"
+    },
+    {
+      "id": "20",
+      "src": "https://pixelfed.social/storage/m/d6eeff88aa0c9af7fd5f87cd6431a14d929d049b/18d3283a934c403f726bc2d6322c254e0a4a1929/G2dPRNSyaI72LVn85AmDBRyp1h2iJ9WMui4nAk0c.jpeg",
+      "title": "Blur",
+      "alt": "Blur"
+    },
+    {
+      "id": "21",
+      "src": "https://pxscdn.com/public/m/_v2/170801569502203904/3b17271c9-2ea36d/Ao1Hq7VdCMfx/1PGDLiBVSF2RBGsM5ChJ32ant7EmSTAEjQO7ez01.jpg",
+      "title": "Boat",
+      "alt": "Boat"
+    },
+    {
+      "id": "22",
+      "src": "https://pxscdn.com/public/m/_v2/170801569502203904/7321b8e85-c3df53/5knTlu3do5uy/d9NuyRGq2SnLpX6GHMvLov96v2SrtwFXKtWFLSnj.png",
+      "title": "Camera pic but a cool filter",
+      "alt": "Bubble"
+    },
+    {
+      "id": "23",
+      "src": "https://pixelfed.social/storage/m/0435cc59bc9edaf1bf37a87430b321de710d4cdf/18d3283a934c403f726bc2d6322c254e0a4a1929/1uNHRsZquXfisIaCaeCRJLCcFMvxprlk3LTImyfe.jpeg",
+      "title": "Custard apple",
+      "alt": "Custard apple"
+    },
+    {
+      "id": "24",
+      "src": "/assets/diesel_sleep.jpeg",
+      "title": "Diesel sunbathing",
+      "alt": "A tan brown dachshund; sunbathing"
+    },
+    {
+      "id": "25",
+      "src": "https://pixelfed.social/storage/m/_v2/170801569502203904/ab7d89eb2-ea8aa4/eyNtVQ4CgnTY/5k1gBxGXm1MC4ITuFJzWUasGYijSRA4HF3Ii30YI.jpeg",
+      "title": "Diwali",
+      "alt": "Diwali"
+    },
+    {
+      "id": "26",
+      "src": "https://pxscdn.com/public/m/_v2/170801569502203904/bf0f52ff2-92677b/spuQMSAnjWEy/UN8Pwr1mN1lMlZT1akK6PjEy07cA3M1lRvfTY4Fa.jpg",
+      "title": "Forest",
+      "alt": "Sunlight causing a lens-flare; in a forest."
+    },
+    {
+      "id": "27",
+      "src": "https://pixelfed.social/storage/m/6de73f73a19f54d3eca6b48a4ab5c50517d520f6/18d3283a934c403f726bc2d6322c254e0a4a1929/OOC0qM1UnbJKKAE2KPeokgtQbayDBFrn0BiOK4Uk.jpeg",
+      "title": "Kodaikanal",
+      "alt": "Kodai"
+    },
+    {
+      "id": "28",
+      "src": "https://pxscdn.com/public/m/_v2/170801569502203904/3b17271c9-2ea36d/rlbeKPJm683D/grmamRvrK5KwzSSCVeC7IEDOvQYLyTzV5N6B8EJy.jpg",
+      "title": "Laptop",
+      "alt": "Laptop"
+    },
+    {
+      "id": "29",
+      "src": "https://pixelfed.social/storage/m/_v2/170801569502203904/ab7d89eb2-ea8aa4/wHW92yWlPq5Y/yCw1HEZqktwQKxhiUoqcGpVsqCcTnQFidSEExVs0.jpeg",
+      "title": "Lantern",
+      "alt": "Paper lanterns hanging on a wire"
+    },
+    {
+      "id": "30",
+      "src": "https://pixelfed.social/storage/m/d6eeff88aa0c9af7fd5f87cd6431a14d929d049b/18d3283a934c403f726bc2d6322c254e0a4a1929/COvPhBubvxMQt0pg2fF6i8WtC1UCMPZNYfCb2FBu.jpeg",
+      "title": "Light beside a pond",
+      "alt": "Light"
+    },
+    {
+      "id": "31",
+      "src": "https://pxscdn.com/public/m/_v2/170801569502203904/7c649620b-69b6c5/g7TysxfmsGHN/n53mPcuA6APTlbPFv4J1rGf2EHPBtjLV3XQ467mx.jpg",
+      "title": "Perspectives",
+      "alt": "Bus"
+    },
+    {
+      "id": "32",
+      "src": "https://pxscdn.com/public/m/_v2/170801569502203904/7321b8e85-c3df53/Dl7R06VxT4dA/L57KqobblXqrlGQCxVdmRN10j01FkTEm3SDmt8UW.jpg",
+      "title": "Playing around in a WM",
+      "alt": "Tmux"
+    },
+    {
+      "id": "33",
+      "src": "https://pxscdn.com/public/m/_v2/170801569502203904/7321b8e85-c3df53/ZTSzOCEv2Htp/n2jTZPmjHRX0bap6KsRjGfzoA1sslX89WR2m67ul.jpg",
+      "title": "Playing around in a WM",
+      "alt": "Tmux"
+    },
+    {
+      "id": "34",
+      "src": "https://pxscdn.com/public/m/_v2/170801569502203904/3b17271c9-2ea36d/xh2gDYROumib/I49aPLvlb7qJjLtVx3rRbccRdJcbGyxcoSkyYq7f.jpg",
+      "title": "Shop",
+      "alt": "Shop"
+    },
+    {
+      "id": "35",
+      "src": "/blog/2023/sun.jpg",
+      "title": "Sunset",
+      "alt": "Sunset"
+    },
+    {
+      "id": "36",
+      "src": "https://pxscdn.com/public/m/_v2/170801569502203904/7321b8e85-c3df53/cusrJiq8XKtH/XlhM1bqTSic6BMtmOT9EKm0B50LwqlskuEqYIB3y.png",
+      "title": "Trapped in a blur",
+      "alt": "Camera"
+    },
+    {
+      "id": "37",
+      "src": "https://pixelfed.social/storage/m/_v2/170801569502203904/83a90637a-595111/JXD5XLmIt9E2/z2aiGwjipZYZw1bU9yFQlo9FQueRBqVvFz9sJf5H.jpg",
+      "title": "Windturbine",
+      "alt": "Windturbine"
+    },
+    {
+      "id": "38",
+      "src": "https://pxscdn.com/public/m/_v2/170801569502203904/7321b8e85-c3df53/MQ3aDpr3SkKX/gBGyB4oP1nV7BeaROeaK13lir5hrCzN0rOPKmNTK.png",
+      "title": "Xero degrees",
+      "alt": "Xero"
+    },
+    {
+      "id": "39",
+      "src": "https://pixelfed.social/storage/m/_v2/170801569502203904/8fb78bfd7-ec88b5/kXBCyZoKHQ3B/B2rm137b7xWZ0G9IMJKBtA6ex6GcGhDLPVVao3FL.jpg",
+      "title": "⛅️",
+      "alt": "⛅️ red clouds"
+    },
+    {
+      "id": "40",
+      "src": "https://pixelfed-prod.nyc3.cdn.digitaloceanspaces.com/public/m/_v2/170801569502203904/1672d1d81-1ab3fb/D4CKl4R8iPYY/OVNuhpjlNej74qvVzXrjTv6UKdwVkNVPWoPpl8CP.jpg",
+      "title": "ペースにブレーキかけて 𝘓𝘦𝘵'𝘴 𝘴𝘭𝘰𝘸 𝘥𝘰𝘸𝘯 ~ 𝘒𝘒𝘉",
+      "alt": "A playground caption: Break by kerokerobonito"
+    },
+    {
+      "id": "41",
+      "src": "https://pixelfed.social/storage/m/_v2/170801569502203904/8fb78bfd7-ec88b5/qSWRjbEvBMsm/LfHUBUEsVr19wxKYQP1lIycBTSbjxes9NNGWa4oA.jpg",
+      "title": "🌄",
+      "alt": "Sky"
+    },
+    {
+      "id": "42",
+      "src": "https://pixelfed-prod.nyc3.digitaloceanspaces.com/public/m/_v2/170801569502203904/2f76a232a-f08599/OxkqAFKaLvZU/wTJqBNtrUP4tzjlUXRoRNcs64NnnbeB4Y0MuGrdC.jpg",
+      "title": "🍦",
+      "alt": "Ice cream"
+    },
+    {
+      "id": "43",
+      "src": "https://pixelfed-prod.nyc3.cdn.digitaloceanspaces.com/public/m/_v2/170801569502203904/5b1a64e4b-a35c92/4a2JqvFk9QvW/AUum33Gz4B92lBh1au9LSzgCrKLoLjDrFPJe5iVu.jpg",
+      "title": "👀 > 🐈 > 🌳",
+      "alt": "A cat on a tree"
+    },
+    {
+      "id": "44",
+      "src": "https://pixelfed-prod.nyc3.cdn.digitaloceanspaces.com/public/m/_v2/170801569502203904/b84b52654-1eb8f9/eRydaRPCSAWf/5rDWKO6DHlrmFACd3AlDLVQrH8QkgMIkt87LZ4FM.jpg",
+      "title": "Diesel with Sunglasses",
+      "alt": "Diesel - (my dachshund) wearing sunglasses, looking at me from the table"
+    },
+    {
+      "id": "45",
+      "src": "https://pixelfed-prod.nyc3.cdn.digitaloceanspaces.com/public/m/_v2/170801569502203904/f98697a52-a34568/0y0a2ACSpoCd/5QZAIe2dZnYzQA6B4shugDOYMhIs6BPo8jmXGkhq.jpg",
+      "title": "Young Diesel",
+      "alt": "Diesel the dachshund (45 days old) looking lovingly at you"
+    },
+    {
+      "id": "46",
+      "src": "https://pixelfed.social/storage/m/_v2/170801569502203904/83a90637a-595111/N27YEJ2InoFe/KmeXsagGXPWNMjPVBz9Y3w4iBvr9HLK0e5Xeej8e.jpg",
+      "title": "Le Soseg Dog",
+      "alt": "Le soseg dog"
+    },
+    {
+      "id": "47",
+      "src": "/blog/hardware-upgrades/fosstalks.jpg",
+      "title": "FOSS Talks",
+      "alt": "FOSS Talks"
+    },
+    {
+      "id": "48",
+      "src": "/blog/hardware-upgrades/treehouse.jpg",
+      "title": "Treehouse",
+      "alt": "Treehouse"
+    },
+    {
+      "id": "49",
+      "src": "https://pxscdn.com/public/m/_v2/170801569502203904/ea59ea880-d2aad0/vnsnjEKjrw1P/ysuxPkUj85PqIg4eZ1rNmp17OH5fiAkeVHcf75ig.jpg",
+      "title": "Flower Boop",
+      "alt": "Diesel boopin' a violet flower on the tip of his nose"
+    },
+    {
+      "id": "50",
+      "src": "https://pxscdn.com/public/m/_v2/170801569502203904/7321b8e85-c3df53/Gk9bzz4BsD8F/DZcbyFlXzWN0wV2NPJL8ZCcjYE13gkSlSHyspVyl.jpg",
+      "title": "Kombucha",
+      "alt": "Kombucha"
+    },
+    {
+      "id": "51",
+      "src": "https://pxscdn.com/public/m/_v2/170801569502203904/7321b8e85-c3df53/QW8lAhdTT17v/TzZvrwbUazQWPg62jJIMptgNnS0qJ6Seo9BUj2we.jpg",
+      "title": "Bougainvillea",
+      "alt": "Bougainvillea"
+    },
+    {
+      "id": "52",
+      "src": "https://pxscdn.com/public/m/_v2/170801569502203904/7321b8e85-c3df53/qjVIgqFIqf78/ILzUmVvj2ebeNqwcai7Pj3e1wM4hKDuAxQpgEMkL.jpg",
+      "title": "Semhall",
+      "alt": "Semhall"
+    },
+    {
+      "id": "53",
+      "src": "https://pxscdn.com/public/m/_v2/170801569502203904/530d83cd3-f15549/rty2cJN8mSvp/oMNc1Zr7tq9DJKjqnp0Fqa6gKcM4vjPNHEHnNiTH.jpg",
+      "title": "Gritty",
+      "alt": "Semhall"
+    },
+    {
+      "id": "54",
+      "src": "https://pxscdn.com/public/m/_v2/170801569502203904/3781ba7d4-1bb9dc/kI4m04ZnReEW/kjv2rhaTQp7xCnZlX8KRMmLltk0m2HCk6M1GtjHD.jpg",
+      "title": "Night",
+      "alt": "Night"
+    },
+    {
+      "id": "55",
+      "src": "https://pxscdn.com/public/m/_v2/170801569502203904/586f75268-5004eb/lWufRKWJLBvf/czdUJY20NvovnAObIqT0gpjOagQWXIKuhwKzhNUy.jpg",
+      "title": "BCBS/tower block",
+      "alt": "Tower block"
+    },
+    {
+      "id": "56",
+      "src": "https://pxscdn.com/public/m/_v2/170801569502203904/586f75268-5004eb/hjqcyC1jenvY/8eIMbOVIg9gqHvyjX47Udl7V5d8uIaZRGrkvZN2c.jpg",
+      "title": "BCBS/PRC",
+      "alt": "Library"
+    },
+    {
+      "id": "57",
+      "src": "https://pxscdn.com/public/m/_v2/170801569502203904/586f75268-5004eb/zohtzAenxsEc/LxiAOihFfgscwRWqWG7Jji5j3kVfyc4OF4u2vROE.jpg",
+      "title": "BCBS",
+      "alt": "Foliage"
+    },
+    {
+      "id": "58",
+      "src": "https://pxscdn.com/public/m/_v2/170801569502203904/586f75268-5004eb/8jG66lPt64Pu/mYn1PEqgsjngLlQ7xCJ9lLRwiq615Mce8JmkQvgp.jpg",
+      "title": "BCBS",
+      "alt": "Tea trolley"
+    },
+    {
+      "id": "59",
+      "src": "https://pxscdn.com/public/m/_v2/170801569502203904/586f75268-5004eb/2Fcw4Q1eVKl7/loJ3z56ofDd7fZe2MGoTAIj9ffA5QyuCVdYfCKO3.jpg",
+      "title": "BCBS Cap",
+      "alt": "School Cap"
+    },
+    {
+      "id": "60",
+      "src": "https://pxscdn.com/public/m/_v2/170801569502203904/586f75268-5004eb/zDNoIpo6bJV9/GFGUSX11qN2MsTeOVJGHdFoiCrCxUOuCyK0V8jh9.jpg",
+      "title": "Car",
+      "alt": "Car"
+    },
+    {
+      "id": "61",
+      "src": "https://pxscdn.com/public/m/_v2/170801569502203904/586f75268-5004eb/pl7OgLfPwMFc/N5W9Sgjv6meaZIYLZ4XnQWgNLUqBpvOHuXV1LMNB.jpg",
+      "title": "Car",
+      "alt": "Mini cooper"
+    },
+    {
+      "id": "62",
+      "src": "https://pxscdn.com/public/m/_v2/170801569502203904/586f75268-5004eb/pIzZM7eZUXSI/3UVpDaezChrrOK6xIFW6MO90GHw0u50hp0gs7wYV.jpg",
+      "title": "Semhall",
+      "alt": "Semhall talk"
+    },
+    {
+      "id": "63",
+      "src": "https://pxscdn.com/public/m/_v2/170801569502203904/586f75268-5004eb/jwSrJqdQ4Tvl/mEfzNx5bc6NnKpoFqobmK6XJ5DAuy4nCjQiwjpuc.jpg",
+      "title": "Semhall",
+      "alt": "Semhall person"
+    }
+  ]
+}
