@@ -26,10 +26,10 @@
 </head>
 
 <body>
-  <header>
+    <header>
     <h1>
       polarhive
-      <video src="/assets/glitch.mp4" class="video-circle" autoplay muted loop alt="profile picture">
+      <video src="/assets/glitch.mp4" class="video-circle" autoplay muted loop alt="profile picture"></video>
     </h1>
     <nav>
       <a href="/blog">/blog</a><br>
@@ -72,9 +72,118 @@
       </ul>
     </details>
 
-    <img
-      src="https://pxscdn.com/public/m/_v2/170801569502203904/7321b8e85-c3df53/Dl7R06VxT4dA/L57KqobblXqrlGQCxVdmRN10j01FkTEm3SDmt8UW.jpg"
-      alt="Nathan's photo">
+
+    <script defer>
+      (function(){
+        var jsonUrl = '/photos/photos.json';
+        var img = document.getElementById('profile-photo');
+        if (!img) return;
+      })();
+    </script>
+
+            <style>
+              /* plain hero image (no cropping) */
+              .hero-photo-container{ position:relative; width:100%; max-width:720px; margin:1.25rem auto; overflow:hidden; background:transparent; border-radius:12px; }
+              #hero-photo{ display:block; width:100%; height:auto; border-radius:12px; }
+              .swipe-overlay{ position:absolute; left:0; top:0; right:0; bottom:0; pointer-events:none; transform:translateX(-100%); border-radius:12px; }
+          .swipe-overlay .bar{ position:absolute; left:0; top:0; height:100%; width:35%; background:linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.95) 50%, rgba(255,255,255,0) 100%); box-shadow:0 0 40px rgba(255,255,255,0.12); }
+          .swipe-overlay.animate{ transition:transform 700ms cubic-bezier(.2,.9,.2,1); transform:translateX(120%); }
+          #hero-photo.loaded{ transition:opacity 300ms ease-in; opacity:1; }
+          #hero-photo{ opacity:0; }
+          #hero-photo.error{ opacity:0.5; }
+        </style>
+
+        <div class="hero-photo-container" role="img" aria-label="Hero image">
+          <img id="hero-photo" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==">
+          <div class="swipe-overlay" aria-hidden="true"><div class="bar"></div></div>
+        </div>
+
+        <script>
+          (function(){
+            var jsonUrl = '/photos/photos.json';
+            var img = document.getElementById('hero-photo');
+            var overlay = document.querySelector('.swipe-overlay');
+            if (!img) return;
+
+            // When the page has finished loading (rest of site), then schedule hero load
+            function onPageReady(cb){
+              if ('requestIdleCallback' in window) {
+                window.addEventListener('load', function(){ requestIdleCallback(cb, {timeout:2000}); });
+              } else {
+                window.addEventListener('load', function(){ setTimeout(cb, 300); });
+              }
+            }
+
+            function startSwipeAndLoad(photo){
+              if (!photo || !photo.src) return;
+
+              img.dataset.src = photo.src;
+              img.dataset.alt = photo.alt || photo.title || '';
+              if (photo.title) img.dataset.title = photo.title;
+
+              // Use IntersectionObserver to avoid loading if the image is far offscreen
+              var io = new IntersectionObserver(function(entries, observer){
+                entries.forEach(function(entry){
+                  if (entry.isIntersecting) {
+                    // animate swipe
+                    overlay && overlay.classList.add('animate');
+
+                    // start loading image slightly after animation begins
+                    setTimeout(function(){
+                      var loader = new Image();
+                      loader.onload = function(){
+                        img.src = photo.src;
+                        img.alt = img.dataset.alt || img.alt;
+                        if (img.dataset.title) img.title = img.dataset.title;
+                        img.classList && img.classList.add('loaded');
+
+                        // remove overlay after a short delay so the reveal completes
+                        setTimeout(function(){ if (overlay) overlay.parentNode && overlay.parentNode.removeChild(overlay); }, 300);
+                      };
+                      loader.onerror = function(){
+                        console.error('Hero image failed to load:', photo.src);
+                        img.classList && img.classList.add('error');
+                      };
+                      loader.src = photo.src;
+                    }, 80);
+
+                    observer.unobserve(entry.target);
+                  }
+                });
+              }, { root: null, rootMargin: '300px', threshold: 0.01 });
+
+              io.observe(img);
+            }
+
+            onPageReady(function(){
+              // Fetch JSON to get photos metadata only after the page is ready
+              fetch(jsonUrl).then(function(res){
+                if (!res.ok) throw new Error('Failed to fetch ' + jsonUrl);
+                return res.json();
+              }).then(function(data){
+                var photos = data && data.photos ? data.photos : data;
+                if (!photos || !photos.length) return;
+
+                // rotate through images using localStorage index, fallback to random
+                var photo = null;
+                try {
+                  var key = 'hero-photo-idx';
+                  var prev = parseInt(localStorage.getItem(key), 10);
+                  if (isNaN(prev)) prev = -1;
+                  var next = (prev + 1) % photos.length;
+                  localStorage.setItem(key, String(next));
+                  photo = photos[next];
+                } catch (e) {
+                  photo = photos[Math.floor(Math.random() * photos.length)];
+                }
+
+                startSwipeAndLoad(photo);
+              }).catch(function(err){
+                console.error('Error loading hero photo metadata:', err);
+              });
+            });
+          })();
+        </script>
 
 
     <details>
