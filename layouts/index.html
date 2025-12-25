@@ -5,11 +5,14 @@
   <meta charset="utf-8">
   <meta name="author" content="Nathan Paul">
   <meta name="color-scheme" content="light">
-  <meta name="description" content="I'm Nathan a geeky student interested in — computers, minimalism, collaboration & the web. I go by @polarhive online.This is my ~/home on the internet">
-  <meta name="keywords" content="polarhive, polar hive, Polar hive, Polarhive, Nathan, Nathan Paul, blog, POLARHIVE, polarhive.net, polarhive.ml">
+  <meta name="description"
+    content="I'm Nathan a geeky student interested in — computers, minimalism, collaboration & the web. I go by @polarhive online.This is my ~/home on the internet">
+  <meta name="keywords"
+    content="polarhive, polar hive, Polar hive, Polarhive, Nathan, Nathan Paul, blog, POLARHIVE, polarhive.net, polarhive.ml">
   <meta name="theme-color" content="#000000">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:description" content="I'm Nathan a geeky student interested in — computers, minimalism, collaboration & the web. I go by @polarhive online. This is my ~/home on the internet">
+  <meta property="og:description"
+    content="I'm Nathan a geeky student interested in — computers, minimalism, collaboration & the web. I go by @polarhive online. This is my ~/home on the internet">
   <meta name="fediverse:creator" content="@polarhive@mastodon.social">
   <meta property="og:title" content="polarhive's internet home">
   <meta property="og:type" content="website">
@@ -19,14 +22,16 @@
   <link rel="icon" href="/assets/favicon.svg">
   <link rel="stylesheet" href="/assets/main.css">
   <title>polarhive's internet home</title>
-  <script>NekoType="neon"</script>
-  <h1 id=nl><script src="https://webneko.net/n20171213.js"></script><a href="https://webneko.net">Neko</a></h1>
+  <script>NekoType = "neon"</script>
+  <h1 id=nl>
+    <script src="https://webneko.net/n20171213.js"></script><a href="https://webneko.net">Neko</a>
+  </h1>
   <a rel="me" href="https://mastodon.social/@polarhive"></a>
   <script src="/i.js"></script>
 </head>
 
 <body>
-    <header>
+  <header>
     <h1>
       polarhive
       <video src="/assets/glitch.mp4" class="video-circle" autoplay muted loop alt="profile picture"></video>
@@ -43,17 +48,31 @@
 
   <main>
     <h2>Hi. I'm Nathan 👋</h2>
-    <p>
-      A geeky student — interested in computers, minimalism, collaboration & the web. This is my ~/home on the
-      internet. I love indie websites, this site is handcrafted in pure HTML+CSS.
-    </p>
+
     <p>
       I go by <a href=/polarhive>/polarhive</a> on the internet. I blog about tech, <a
         href=/blog/free-libre-software>free/libre software</a> and <a href=/blog/minimalism>minimalism</a>.
-        Check out my <a href="/wiki">/wiki</a> 🌱
+      Check out my <a href="/wiki">/wiki</a> 🌱 I love indie websites; this site is handcrafted in pure HTML+CSS.
     </p>
     <hr>
 
+    <section id="about">
+
+      <p>CS student working on backend and infra: primarily using {Go, Python, and GNU/Linux}. I love simple design,
+        observability, and long-term maintainability. Active contributor to free and open-source software.</p>
+
+      <p>Previously interned at <a href="https://golain.io">Golain</a> (an IoT startup), helping refactor core
+        components, and <a href="https://theinnovationlab.in/">The Innovation Lab</a>,
+        working on microservice optimization techniques and cloud-computing research. Built <em><a
+            href="/eloop">eloop</a></em>: An
+        all-in-one event-management and ticketing platform (RBAC, dynamic forms, QR check-ins) serving 250+ users at
+        various hackathons.</p>
+
+      <p>Open to internship opportunities (Summer 2026 and in-semester). Interested in hiring me? <a
+          href="mailto:mail@polarhive.net">mail@polarhive.net</a></p>
+    </section>
+
+    <hr>
     <details>
       <summary>🔗 linkstash</summary>
       <ul>
@@ -72,154 +91,186 @@
       </ul>
     </details>
 
-
     <script defer>
-      (function(){
+        (function () {
+          var jsonUrl = '/photos/photos.json';
+          var img = document.getElementById('profile-photo');
+          if (!img) return;
+        })();
+    </script>
+
+    <style>
+      .hero-photo-container {
+        position: relative;
+        width: 100%;
+        max-width: 720px;
+        margin: 1.25rem auto;
+        overflow: hidden;
+        background: transparent;
+        border-radius: 12px;
+      }
+
+      #hero-photo {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+      }
+
+      .swipe-overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+        transform: translateX(-100%);
+        border-radius: 12px;
+      }
+
+      .swipe-overlay .bar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 35%;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.95) 50%, rgba(255, 255, 255, 0) 100%);
+        box-shadow: 0 0 40px rgba(255, 255, 255, 0.12);
+      }
+
+      .swipe-overlay.animate {
+        transition: transform 700ms cubic-bezier(.2, .9, .2, 1);
+        transform: translateX(120%);
+      }
+
+      #hero-photo.loaded {
+        transition: opacity 300ms ease-in;
+        opacity: 1;
+      }
+
+      #hero-photo {
+        opacity: 0;
+      }
+
+      #hero-photo.error {
+        opacity: 0.5;
+      }
+    </style>
+
+    <div class="hero-photo-container" role="img" aria-label="Hero image">
+      <img id="hero-photo" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==">
+      <div class="swipe-overlay" aria-hidden="true">
+        <div class="bar"></div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
         var jsonUrl = '/photos/photos.json';
-        var img = document.getElementById('profile-photo');
+        var img = document.getElementById('hero-photo');
+        var overlay = document.querySelector('.swipe-overlay');
         if (!img) return;
+
+        // When the page has finished loading (rest of site), then schedule hero load
+        function onPageReady(cb) {
+          if ('requestIdleCallback' in window) {
+            window.addEventListener('load', function () { requestIdleCallback(cb, { timeout: 2000 }); });
+          } else {
+            window.addEventListener('load', function () { setTimeout(cb, 300); });
+          }
+        }
+
+        function startSwipeAndLoad(photo) {
+          if (!photo || !photo.src) return;
+
+          img.dataset.src = photo.src;
+          img.dataset.alt = photo.alt || photo.title || '';
+          if (photo.title) img.dataset.title = photo.title;
+
+          // Use IntersectionObserver to avoid loading if the image is far offscreen
+          var io = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                // animate swipe
+                overlay && overlay.classList.add('animate');
+
+                // start loading image slightly after animation begins
+                setTimeout(function () {
+                  var loader = new Image();
+                  loader.onload = function () {
+                    img.src = photo.src;
+                    img.alt = img.dataset.alt || img.alt;
+                    if (img.dataset.title) img.title = img.dataset.title;
+                    img.classList && img.classList.add('loaded');
+
+                    // remove overlay after a short delay so the reveal completes
+                    setTimeout(function () { if (overlay) overlay.parentNode && overlay.parentNode.removeChild(overlay); }, 300);
+                  };
+                  loader.onerror = function () {
+                    console.error('Hero image failed to load:', photo.src);
+                    img.classList && img.classList.add('error');
+                  };
+                  loader.src = photo.src;
+                }, 80);
+
+                observer.unobserve(entry.target);
+              }
+            });
+          }, { root: null, rootMargin: '300px', threshold: 0.01 });
+
+          io.observe(img);
+        }
+
+        onPageReady(function () {
+          // Fetch JSON to get photos metadata only after the page is ready
+          fetch(jsonUrl).then(function (res) {
+            if (!res.ok) throw new Error('Failed to fetch ' + jsonUrl);
+            return res.json();
+          }).then(function (data) {
+            var photos = data && data.photos ? data.photos : data;
+            if (!photos || !photos.length) return;
+
+            // deterministic shuffle: users in the same UTC time-bucket see the same photo
+            var photo = null;
+            try {
+              // var bucketMs = 24 * 60 * 60 * 1000; // 24h in ms
+              var bucketMs = 1 * 60 * 1000; // in ms
+              var seed = Math.floor(Date.now() / bucketMs);
+
+              // small seeded PRNG (mulberry32)
+              function mulberry32(a) {
+                return function () {
+                  var t = a += 0x6D2B79F5;
+                  t = Math.imul(t ^ (t >>> 15), t | 1);
+                  t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+                  return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+                };
+              }
+
+              function seededShuffle(array, s) {
+                var out = array.slice();
+                var rnd = mulberry32(s >>> 0);
+                for (var i = out.length - 1; i > 0; i--) {
+                  var j = Math.floor(rnd() * (i + 1));
+                  var tmp = out[i]; out[i] = out[j]; out[j] = tmp;
+                }
+                return out;
+              }
+
+              var shuffled = seededShuffle(photos, seed);
+              photo = shuffled[0];
+            } catch (e) {
+              photo = photos[Math.floor(Math.random() * photos.length)];
+            }
+
+            startSwipeAndLoad(photo);
+          }).catch(function (err) {
+            console.error('Error loading hero photo metadata:', err);
+          });
+        });
       })();
     </script>
 
-            <style>
-              /* plain hero image (no cropping) */
-              .hero-photo-container{ position:relative; width:100%; max-width:720px; margin:1.25rem auto; overflow:hidden; background:transparent; border-radius:12px; }
-              #hero-photo{ display:block; width:100%; height:auto; border-radius:12px; }
-              .swipe-overlay{ position:absolute; left:0; top:0; right:0; bottom:0; pointer-events:none; transform:translateX(-100%); border-radius:12px; }
-          .swipe-overlay .bar{ position:absolute; left:0; top:0; height:100%; width:35%; background:linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.95) 50%, rgba(255,255,255,0) 100%); box-shadow:0 0 40px rgba(255,255,255,0.12); }
-          .swipe-overlay.animate{ transition:transform 700ms cubic-bezier(.2,.9,.2,1); transform:translateX(120%); }
-          #hero-photo.loaded{ transition:opacity 300ms ease-in; opacity:1; }
-          #hero-photo{ opacity:0; }
-          #hero-photo.error{ opacity:0.5; }
-        </style>
-
-        <div class="hero-photo-container" role="img" aria-label="Hero image">
-          <img id="hero-photo" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==">
-          <div class="swipe-overlay" aria-hidden="true"><div class="bar"></div></div>
-        </div>
-
-        <script>
-          (function(){
-            var jsonUrl = '/photos/photos.json';
-            var img = document.getElementById('hero-photo');
-            var overlay = document.querySelector('.swipe-overlay');
-            if (!img) return;
-
-            // When the page has finished loading (rest of site), then schedule hero load
-            function onPageReady(cb){
-              if ('requestIdleCallback' in window) {
-                window.addEventListener('load', function(){ requestIdleCallback(cb, {timeout:2000}); });
-              } else {
-                window.addEventListener('load', function(){ setTimeout(cb, 300); });
-              }
-            }
-
-            function startSwipeAndLoad(photo){
-              if (!photo || !photo.src) return;
-
-              img.dataset.src = photo.src;
-              img.dataset.alt = photo.alt || photo.title || '';
-              if (photo.title) img.dataset.title = photo.title;
-
-              // Use IntersectionObserver to avoid loading if the image is far offscreen
-              var io = new IntersectionObserver(function(entries, observer){
-                entries.forEach(function(entry){
-                  if (entry.isIntersecting) {
-                    // animate swipe
-                    overlay && overlay.classList.add('animate');
-
-                    // start loading image slightly after animation begins
-                    setTimeout(function(){
-                      var loader = new Image();
-                      loader.onload = function(){
-                        img.src = photo.src;
-                        img.alt = img.dataset.alt || img.alt;
-                        if (img.dataset.title) img.title = img.dataset.title;
-                        img.classList && img.classList.add('loaded');
-
-                        // remove overlay after a short delay so the reveal completes
-                        setTimeout(function(){ if (overlay) overlay.parentNode && overlay.parentNode.removeChild(overlay); }, 300);
-                      };
-                      loader.onerror = function(){
-                        console.error('Hero image failed to load:', photo.src);
-                        img.classList && img.classList.add('error');
-                      };
-                      loader.src = photo.src;
-                    }, 80);
-
-                    observer.unobserve(entry.target);
-                  }
-                });
-              }, { root: null, rootMargin: '300px', threshold: 0.01 });
-
-              io.observe(img);
-            }
-
-            onPageReady(function(){
-              // Fetch JSON to get photos metadata only after the page is ready
-              fetch(jsonUrl).then(function(res){
-                if (!res.ok) throw new Error('Failed to fetch ' + jsonUrl);
-                return res.json();
-              }).then(function(data){
-                var photos = data && data.photos ? data.photos : data;
-                if (!photos || !photos.length) return;
-
-                // deterministic shuffle: users in the same UTC time-bucket see the same photo
-                    var photo = null;
-                    try {
-                      // var bucketMs = 24 * 60 * 60 * 1000; // 24h in ms
-                      var bucketMs = 1 * 60 * 1000; // in ms
-                      var seed = Math.floor(Date.now() / bucketMs);
-
-                      // small seeded PRNG (mulberry32)
-                      function mulberry32(a){
-                        return function(){
-                          var t = a += 0x6D2B79F5;
-                          t = Math.imul(t ^ (t >>> 15), t | 1);
-                          t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
-                          return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-                        };
-                      }
-
-                      function seededShuffle(array, s){
-                        var out = array.slice();
-                        var rnd = mulberry32(s >>> 0);
-                        for (var i = out.length - 1; i > 0; i--) {
-                          var j = Math.floor(rnd() * (i + 1));
-                          var tmp = out[i]; out[i] = out[j]; out[j] = tmp;
-                        }
-                        return out;
-                      }
-
-                      var shuffled = seededShuffle(photos, seed);
-                      photo = shuffled[0];
-                    } catch (e) {
-                      photo = photos[Math.floor(Math.random() * photos.length)];
-                    }
-
-                startSwipeAndLoad(photo);
-              }).catch(function(err){
-                console.error('Error loading hero photo metadata:', err);
-              });
-            });
-          })();
-        </script>
-
-
-    <details>
-      <summary>inter-webs 🦥 </summary>
-      <ul>
-        <li><a href="https://bsky.app/profile/polarhive.net">Bluesky</a>
-        <li><a href="/tg">Telegram</a>
-        <li><a href="/youtube">YouTube</a>
-        <li><a href="/mastodon">Mastodon</a>
-        <li><a href="/pixelfed">Pixelfed</a>
-        <li><a href="/matrix">[matrix]</a>
-      </ul>
-    </details>
-
-
-    <hr>
     <fieldset>This site is full of easter-eggs and is built from scratch. Poke around — have fun. Feel free to <a
         href="/email">/email</a> me or sign my <a href="/guestbook">/guestbook</a> to say hi!
     </fieldset>
