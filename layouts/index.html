@@ -275,12 +275,51 @@
         href="/email">/email</a> me or sign my <a href="/guestbook">/guestbook</a> to say hi!
     </fieldset>
 
+
     <hr>
     <footer>
       <div class="webring"><a href="https://fediring.net/previous?host=polarhive.net">&lt;-</a> <a
           href="https://fediring.net/">fediring</a> <a href="https://fediring.net/next?host=polarhive.net">-></a>
         <div style="float:right;"><a href="/feed">/feed</a></div>
       </div>
+
+
+      <div id="lastfm-track" style="margin-top: 1rem; padding: 0.5rem; font-size: 0.9rem;">
+        <span>Loading last played track...</span>
+      </div>
+
+
+      <script>
+        (async function () {
+          try {
+            const response = await fetch('https://lastfm-last-played.biancarosa.com.br/polarhive/latest-song');
+            const data = await response.json();
+            const track = data.track;
+
+            const trackName = track.name;
+            const artistName = track.artist['#text'];
+            const albumName = track.album['#text'];
+            const trackUrl = track.url;
+            const albumArt = track.image.find(img => img.size === 'small')?.['#text'] || '';
+
+            const lastfmDiv = document.getElementById('lastfm-track');
+            lastfmDiv.innerHTML = `
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            ${albumArt ? `<img src="${albumArt}" alt="${albumName}" style="width: 34px; height: 34px;">` : ''}
+            <div>
+              <div>🎵 Last played: <a href="${trackUrl}" target="_blank" rel="noopener">${trackName}</a></div>
+              <div style="font-size: 0.85rem; opacity: 0.8;">by ${artistName} • ${albumName}</div>
+            </div>
+          </div>
+        `;
+          } catch (error) {
+            console.error('Error fetching Last.fm data:', error);
+            document.getElementById('lastfm-track').innerHTML = '';
+          }
+        })();
+      </script>
+
+
     </footer>
   </main>
 </body>
