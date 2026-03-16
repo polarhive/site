@@ -25,10 +25,10 @@
 
       const lastfmDiv = document.getElementById('lastfm-track');
       lastfmDiv.innerHTML = `
-          <div style="display: flex; align-items: center; gap: 0.5rem;">
-            ${albumArt ? `<img src="${albumArt}" alt="${albumName}" style="width: 34px; height: 34px;">` : ''}
-            <div>
-              <div>🎵 Last played: <a href="${trackUrl}" target="_blank" rel="noopener">${trackName}</a></div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+            ${albumArt ? `<img src="${albumArt}" alt="${albumName}" style="width: 34px; height: 34px; flex-shrink: 0;">` : ''}
+            <div style="min-width: 0; word-break: break-word;">
+              <a href="${trackUrl}" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline; display: block;">${trackName}</a>
               <div style="font-size: 0.85rem; opacity: 0.8;">by ${artistName} • ${albumName}</div>
             </div>
           </div>
